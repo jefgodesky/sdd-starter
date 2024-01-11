@@ -18,5 +18,8 @@
   ],
   "maintainers": [
     "Jason Godesky <jason@godesky.net>"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
 }
