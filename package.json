@@ -19,6 +19,9 @@
   "maintainers": [
     "Jason Godesky <jason@godesky.net>"
   ],
+  "scripts": {
+    "components:build": "tsc --project components/tsconfig.json"
+  },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "typescript": "^5.3.3"
