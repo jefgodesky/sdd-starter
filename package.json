@@ -1,0 +1,22 @@
+{
+  "name": "sdd-starter",
+  "version": "1.0.0",
+  "description": "A starting point for a new design system for system-driven design.",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/jefgodesky/sdd-starter#readme",
+  "bugs": {
+    "url": "https://github.com/jefgodesky/sdd-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jefgodesky/sdd-starter.git"
+  },
+  "main": "index.js",
+  "type": "module",
+  "contributors": [
+    "Jason Godesky <jason@godesky.net>"
+  ],
+  "maintainers": [
+    "Jason Godesky <jason@godesky.net>"
+  ]
+}
