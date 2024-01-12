@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "test": "jest",
+    "lint": "ts-standard",
     "components:build": "tsc --project components/tsconfig.json"
   },
   "devDependencies": {
