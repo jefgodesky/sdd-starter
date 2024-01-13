@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>An SDD Design System: Instructions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" media="all" href="/stylesheets/index.css" />
+  </head>
+  <body>
+    <nav class="breadcrumbs">
+      <ul>
+        <li><a href="index.html">An SDD Design System</a></li>
+        <li class="current">Instructions</li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Instructions</h1>
+      <p>You can find the
+        <a href="https://github.com/jefgodesky/sdd-starter">source code</a>
+        for this system on <a href="https://github.com">GitHub</a>.
+      </p>
+      <p>To use it on your own website, add the following to the header of each 
+        page that you want to use it on:</p>
+      <code class="language-html block">&lt;link rel="stylesheet" href="https://design.example.com/{{ version path }}/index.css" crossorigin="" /&gt;</code>
+      <p>Then, add the following to the end of each page that you want to use
+        it on, just before you close your <code>&lt;body&gt;</code> tag:</p>
+      <code class="language-html block">&lt;script src="https://design.example.com/{{ version path }}/bundle.js"&gt;&lt;/script&gt;</code>
+    </main>
+    <script src="/scripts/bundle.js"></script>
+  </body>
+</html>
