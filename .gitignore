@@ -1,5 +1,7 @@
 # Ignore build files
+dist
 version.json
+stylesheets/modules/*.scss
 
 # Ignore Node Modules
 node_modules

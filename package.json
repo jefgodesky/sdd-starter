@@ -22,8 +22,11 @@
   "scripts": {
     "test": "jest",
     "lint": "ts-standard",
+    "dist:mkdir": "mkdir -p dist",
     "components:build": "tsc --project components/tsconfig.json",
-    "tokens:addv": "node --loader ts-node/esm lib/generate-version.ts"
+    "tokens": "npm-run-all dist:mkdir tokens:*",
+    "tokens:addv": "node --loader ts-node/esm lib/generate-version.ts",
+    "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary version.json --html-src docs --html-dist dist"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
