@@ -1,2 +1,8 @@
-.idea
+# Ignore build files
+version.json
+
+# Ignore Node Modules
 node_modules
+
+# Ignore IDE configuration files
+.idea
