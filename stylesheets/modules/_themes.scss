@@ -1,0 +1,20 @@
+@use "colors";
+
+$themes: (
+  "light": (
+    "bg": colors.$light-bg,
+    "fg": colors.$light-fg,
+    "link-base": colors.$light-link,
+    "link-hover": colors.$light-link-hover,
+    "link-active": colors.$light-link-active,
+    "link-visited": colors.$light-link-visited
+  ),
+  "dark": (
+    "bg": colors.$dark-bg,
+    "fg": colors.$dark-fg,
+    "link-base": colors.$dark-link,
+    "link-hover": colors.$dark-link-hover,
+    "link-active": colors.$dark-link-active,
+    "link-visited": colors.$dark-link-visited
+  )
+)

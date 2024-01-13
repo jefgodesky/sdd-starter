@@ -2,10 +2,13 @@
 dist
 version.json
 stylesheets/modules/*.scss
+!stylesheets/modules/_mixins.scss
 !stylesheets/modules/_placeholders.scss
+!stylesheets/modules/_themes.scss
 
 # Ignore Node Modules
 node_modules
 
-# Ignore IDE configuration files
+# Ignore IDE configuration files & other local junk
+.DS_Store
 .idea

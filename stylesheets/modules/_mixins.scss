@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "themes";
+
+@mixin set-color($property, $var) {
+  #{$property}: map.get(themes.$themes, "light", $var);
+
+  .dark {
+    #{$property}: map.get(themes.$themes, "dark", $var);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:not(.light) {
+      #{$property}: map.get(themes.$themes, "dark", $var);
+    }
+  }
+}

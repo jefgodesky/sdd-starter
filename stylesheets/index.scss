@@ -1,6 +1,13 @@
 @use "partials/reset";
 @use "partials/typography";
+
+@use "modules/mixins";
 @use "modules/placeholders";
+
+body {
+  @include mixins.set-color("background-color", "bg");
+  @include mixins.set-color("color", "fg");
+}
 
 header,
 main {
