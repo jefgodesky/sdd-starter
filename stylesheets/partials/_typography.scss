@@ -1,0 +1,21 @@
+@use "../modules/typography";
+
+h1 {
+  font: typography.$h1;
+}
+
+h2 {
+  font: typography.$h2;
+}
+
+h3 {
+  font: typography.$h3;
+}
+
+h4 {
+  font: typography.$h4;
+}
+
+body {
+  font: typography.$body;
+}
