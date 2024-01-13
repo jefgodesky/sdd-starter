@@ -2,6 +2,7 @@
 dist
 version.json
 stylesheets/modules/*.scss
+!stylesheets/modules/_placeholders.scss
 
 # Ignore Node Modules
 node_modules

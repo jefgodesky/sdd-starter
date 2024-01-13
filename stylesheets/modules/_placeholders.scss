@@ -1,0 +1,13 @@
+@use "./breakpoints";
+@use "./spacing";
+
+%layout {
+  margin: 0 auto;
+  max-width: calc(#{breakpoints.$desktop} - (#{spacing.$horizontal} * 2));
+  padding: spacing.$vertical spacing.$horizontal;
+}
+
+%breakout {
+  margin: spacing.$vertical calc(-1 * (100vw - 100%) / 2);
+  padding: spacing.$vertical calc((100vw - 100%) / 2);
+}
