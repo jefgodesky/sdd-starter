@@ -24,6 +24,7 @@
     "lint": "ts-standard",
     "dist:mkdir": "mkdir -p dist",
     "components:build": "tsc --project components/tsconfig.json",
+    "docs:dev": "chokidar ./docs/*.html -c \"npm run tokens\"",
     "tokens": "npm-run-all dist:mkdir tokens:*",
     "tokens:addv": "node --loader ts-node/esm lib/generate-version.ts",
     "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary version.json --html-src docs --html-dist dist",
