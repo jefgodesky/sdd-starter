@@ -6,7 +6,7 @@ const generateVersion = (): void => {
   if (typeof version !== 'string') { throw new Error('version is not a string') }
   const data = {
     version,
-    'version path': `/v${version.split('.').join('/')}`
+    'version path': `v${version.split('.').join('/')}`
   }
   writeFileSync(join(process.cwd(), 'version.json'), JSON.stringify(data, null, 2), { encoding: 'utf8' })
 }

@@ -15,7 +15,7 @@ describe('generateVersion', () => {
     fs.writeFileSync = writeFileMock
     generateVersion()
     const filename = join(process.cwd(), 'version.json')
-    const content = '{\n  "version": "1.0.0",\n  "version path": "/v1/0/0"\n}'
+    const content = '{\n  "version": "1.0.0",\n  "version path": "v1/0/0"\n}'
     const options = { encoding: 'utf8' }
     expect(writeFileMock).toHaveBeenCalledWith(filename, content, options)
   })
