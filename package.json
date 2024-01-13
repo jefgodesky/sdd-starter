@@ -23,6 +23,7 @@
     "test": "jest",
     "lint": "ts-standard",
     "dist:mkdir": "mkdir -p dist",
+    "server:dev": "browser-sync start --server dist --files dist",
     "components:build": "tsc --project components/tsconfig.json",
     "dev": "npm-run-all --parallel *:dev",
     "docs:dev": "chokidar ./docs/*.html -c \"npm run tokens\"",
