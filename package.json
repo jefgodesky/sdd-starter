@@ -26,7 +26,8 @@
     "components:build": "tsc --project components/tsconfig.json",
     "tokens": "npm-run-all dist:mkdir tokens:*",
     "tokens:addv": "node --loader ts-node/esm lib/generate-version.ts",
-    "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary version.json --html-src docs --html-dist dist"
+    "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary version.json --html-src docs --html-dist dist",
+    "tokens:dev": "chokidar tokens.json -c \"npm run tokens\""
   },
   "devDependencies": {
     "@types/browser-sync": "^2.29.0",
