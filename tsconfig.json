@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["esnext"],
+    "lib": ["esnext", "dom", "es6", "dom.Iterable", "scripthost"],
     "target": "esnext",
     "module": "esnext",
     "esModuleInterop": true,
