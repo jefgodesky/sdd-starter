@@ -1,12 +1,12 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { join } from 'path'
+import getVersion from './get-version'
 
 const generateVersion = (): void => {
-  const { version } = JSON.parse(readFileSync(join(process.cwd(), 'package.json'), 'utf8'))
-  if (typeof version !== 'string') { throw new Error('version is not a string') }
+  const { version, path } = getVersion()
   const data = {
     version,
-    'version path': `v${version.split('.').join('/')}`
+    'version path': path
   }
   writeFileSync(join(process.cwd(), 'version.json'), JSON.stringify(data, null, 2), { encoding: 'utf8' })
 }
