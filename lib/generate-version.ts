@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs'
 import { join } from 'path'
-import getVersion from './get-version'
+import getVersion from './get-version.js'
 
 const generateVersion = (): void => {
   const { version, path } = getVersion()
