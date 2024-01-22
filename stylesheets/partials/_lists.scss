@@ -1,0 +1,16 @@
+@use "../modules/spacing";
+
+li {
+  margin-bottom: spacing.$text-xs;
+}
+
+ol,
+ul {
+  padding-left: spacing.$none;
+
+  ol,
+  ul {
+    margin: spacing.$text-xs 0 spacing.$text-m;
+    padding-left: spacing.$text-xl;
+  }
+}
