@@ -35,10 +35,14 @@
     "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary version.json --html-src docs --html-dist dist",
     "tokens:dev": "chokidar tokens.json -c \"npm run tokens\""
   },
+  "dependencies": {
+    "prismjs": "^1.29.0"
+  },
   "devDependencies": {
     "@types/browser-sync": "^2.29.0",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.0",
+    "@types/prismjs": "^1.26.3",
     "@types/webpack": "^5.28.5",
     "browser-sync": "^3.0.2",
     "chokidar-cli": "^3.0.0",
