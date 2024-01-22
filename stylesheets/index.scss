@@ -1,5 +1,7 @@
 @use "partials/reset";
 
+@use "partials/main";
+@use "partials/header";
 @use "partials/links";
 @use "partials/typography";
 
@@ -9,9 +11,4 @@
 body {
   @include mixins.set-color("background-color", "bg");
   @include mixins.set-color("color", "fg");
-}
-
-header,
-main {
-  @extend %layout;
 }
