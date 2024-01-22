@@ -1,5 +1,7 @@
 @use "partials/reset";
 
+@use "vendor/prism.scss";
+
 @use "partials/main";
 @use "partials/header";
 @use "partials/links";
@@ -9,7 +11,17 @@
 @use "modules/mixins";
 @use "modules/placeholders";
 
+@use "components/code-blocks";
+
 body {
   @include mixins.set-color("background-color", "bg");
   @include mixins.set-color("color", "fg");
+
+  @media not (prefers-color-scheme: dark) {
+    @include prism.default();
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include prism.dark();
+  }
 }
