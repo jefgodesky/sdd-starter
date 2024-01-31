@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>An SDD Design System: Design Tokens</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" media="all" href="/stylesheets/index.css" />
+  </head>
+  <body>
+    <nav class="breadcrumbs">
+      <ul>
+        <li><a href="index.html">An SDD Design System</a></li>
+        <li class="current">Design Tokens</li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Design Tokens</h1>
+      <p><strong>Design tokens</strong> provide a way to record and distribute
+        the atomic design decisions that form the foundation of a design system
+        &mdash; things like colors, typefaces, and spacing choices.</p>
+      <p>The canonical source for our design tokens is our
+        <a href="/tokens.json">tokens file</a>. This is a JSON file that
+        follows the
+        <a href="https://design-tokens.github.io/community-group/format/">W3C
+          Design Tokens Format Module</a>. If you are using a tool that
+        recognizes that format, you can use the link above to import our tokens
+        into your tool.</p>
+      <nav class="toc">
+        <h4>Table of Contents</h4>
+        <ul>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#breakpoints">Breakpoints</a></li>
+          <li>
+            <a href="#typography">Typography</a>
+            <ul>
+              <li><a href="#type-families">Families</a></li>
+              <li><a href="#styles">Styles</a></li>
+            </ul>
+          </li>
+          <li><a href="#spacing">Spacing</a></li>
+        </ul>
+      </nav>
+      <section id="colors">
+        <h2>Colors</h2>
+        <p>If you&rsquo;d like to use the SCSS variables provided for these
+          tokens, you&rsquo;ll need to import the <code>_colors.scss</code>
+          module (found at <code>stylesheets/modules/_colors.scss</code>
+          in our code repository after the tokens have been generated) with a
+          line like the following at the top of your SCSS stylesheet:</p>
+        <code class="block language-scss">@use "/path/to/repo/stylesheets/src/modules/_colors.scss";</code>
+        <h3>Light Theme</h3>
+        {{ swatches.colors.light }}
+        <h3>Dark Theme</h3>
+        {{ swatches.colors.dark }}
+      </section>
+      <section id="breakpoints">
+        <h2>Breakpoints</h2>
+        <p>If you&rsquo;d like to use the SCSS variables provided for these
+          tokens, you&rsquo;ll need to import the <code>_breakpoints.scss</code>
+          module (found at <code>stylesheets/modules/_breakpoints.scss</code>
+          in our code repository after the tokens have been generated) with a
+          line like the following at the top of your SCSS stylesheet:</p>
+        <code class="block language-scss">@use "/path/to/repo/stylesheets/src/modules/_breakpoints.scss";</code>
+        <table>
+          <thead>
+            <tr>
+              <th>SCSS Variable</th>
+              <th>Description</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ for breakpoints.* }}
+            <tr>
+              <td><code>{{ scss }}</code></td>
+              <td>{{ description }}</td>
+              <td>{{ value }}</td>
+            </tr>
+            {{ endfor }}
+          </tbody>
+        </table>
+      </section>
+      <section id="typography">
+        <h2>Typography</h2>
+        <p>If you&rsquo;d like to use the SCSS variables provided for these
+          tokens, you&rsquo;ll need to import the <code>_typography.scss</code>
+          module (found at <code>stylesheets/modules/_typography.scss</code>
+          in our code repository after the tokens have been generated) with a
+          line like the following at the top of your SCSS stylesheet:</p>
+        <code class="block language-scss">@use "/path/to/repo/stylesheets/src/modules/_typography.scss";</code>
+        <section id="type-families">
+          <h3>Families</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>SCSS Variable</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ for typography.families.* }}
+              <tr>
+                <td>{{ description }}</td>
+                <td><code>{{ scss }}</code></td>
+                <td>{{ family }}</td>
+              </tr>
+              {{ endfor }}
+            </tbody>
+          </table>
+        </section>
+        <section id="type-styles">
+          <h3>Styles</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>SCSS Variable</th>
+                <th>CSS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ for typography.styles.* }}
+              <tr>
+                <td>{{ description }}</td>
+                <td><code>{{ scss }}</code></td>
+                <td><code class="block language-css">{{ css }}</code></td>
+              </tr>
+              {{ endfor }}
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section id="spacing">
+        <h2>Spacing</h2>
+        <p>If you&rsquo;d like to use the SCSS variables provided for these
+          tokens, you&rsquo;ll need to import the <code>_spacing.scss</code>
+          module (found at <code>stylesheets/modules/_spacing.scss</code>
+          in our code repository after the tokens have been generated) with a
+          line like the following at the top of your SCSS stylesheet:</p>
+        <code class="block language-scss">@use "/path/to/repo/stylesheets/src/modules/_spacing.scss";</code>
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>SCSS Variable</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ for typography.sizes.* }}
+            <tr>
+              <td>{{ description }}</td>
+              <td><code>{{ scss }}</code></td>
+              <td>{{ value }}</td>
+            </tr>
+            {{ endfor }}
+            {{ for spacing.* }}
+            <tr>
+              <td>{{ description }}</td>
+              <td><code>{{ scss }}</code></td>
+              <td>{{ value }}</td>
+            </tr>
+            {{ endfor }}
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="/scripts/bundle.js"></script>
+  </body>
+</html>

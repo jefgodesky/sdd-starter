@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>An SDD Design System: Components</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" media="all" href="../stylesheets/index.css" />
+  </head>
+  <body>
+    <nav class="breadcrumbs">
+      <ul>
+        <li><a href="../index.html">An SDD Design System</a></li>
+        <li class="current">Templates</li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Templates</h1>
+      <section id="template-basic">
+        <h2>Basic Template</h2>
+        <div class="centered-text">
+          <a href="basic.html">Link</a>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;link rel="stylesheet" media="all" href="https://design.example.com/{{ version path }}/index.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main&gt;
+      &lt;h1&gt;Title&lt;/h1&gt;
+      &lt;!-- Content goes here --&gt;
+    &lt;/main&gt;
+    &lt;script src="https://design.example.com/{{ version path }}/bundle.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The basic template is used for this page and all of the other
+            pages in this design system.</li>
+        </ul>
+      </section>
+    </main>
+    <script src="../scripts/bundle.js"></script>
+  </body>
+</html>

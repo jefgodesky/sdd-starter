@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>An SDD Design System: Typography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" media="all" href="/stylesheets/index.css" />
+  </head>
+  <body>
+    <nav class="breadcrumbs">
+      <ul>
+        <li><a href="index.html">An SDD Design System</a></li>
+        <li class="current">Typography</li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Typography</h1>
+      <p>Oliver Reichenstein said that web design is 95% typography, so it
+        seems fitting to have a whole page of this design system dedicated to
+        demonstrating its typographic hierarchy.</p>
+      <p>The body typeface stack is <a href="{{ typography.families.body.helvetica.url }}">{{ typography.families.body.helvetica }}</a>,
+        by {{ typography.families.body.helvetica.designer }}, followed by
+        <a href="{{ typography.families.body.arial.url }}">{{ typography.families.body.arial }}</a>,
+        by {{ typography.families.body.arial.designer }}.</p>
+      <p>The primary heading above is {{ typography.styles.h1.size }} with
+        {{ typography.styles.h1.weight }} weight.</p>
+      <h2>Secondary Heading</h2>
+      <p>The secondary heading above is {{ typography.styles.h2.size }} with
+        {{ typography.styles.h2.weight }} weight.</p>
+      <h3>Tertiary Heading</h3>
+      <p>The tertiary heading above is {{ typography.styles.h3.size }} with
+        {{ typography.styles.h3.weight }} weight.</p>
+      <h4>Quarternary Heading</h4>
+      <p>The quarternary heading above is {{ typography.styles.h4.size }} with
+        {{ typography.styles.h4.weight }} weight.</p>
+      <ul>
+        <li>This is an item in an unordered list.</li>
+        <li>This is an especially long item in an unordered list, with text
+          that will wrap to multiple lines due to its length.</li>
+        <li>
+          This item includes its own unordered sublist.
+          <ul>
+            <li>This is an item in a sublist.</li>
+            <li>This item is nested within two unordered lists.</li>
+            <li>This is the last itme in the sublist.</li>
+          </ul>
+        </li>
+        <li>
+          This item also has a sublist, but it&rsquo;s an ordered list, rather
+          than an unordered list.
+          <ol>
+            <li>This is the first item in a sublist.</li>
+            <li>This item comes second.</li>
+            <li>And last but not least is this item.</li>
+          </ol>
+        </li>
+        <li>
+          Word processors &mdash; especially early word processors &mdash;
+          could not handle hanging indentation, so they indented lists as a
+          compromise with technical feasibility. In fact, hanging punctuation
+          is typographically correct and, despite how &ldquo;wrong&rdquo; it
+          may feel now, easier to read, because it maintains a consistent left
+          margin to the text.
+          <ul>
+            <li>All that said, we <em>do</em> have to indent sublists.</li>
+            <li>Otherwise, they&rsquo;ll lose all visual distinction, and you
+              won&rsquo;t be able to tell items in the sublist from those in
+              the parent list.</li>
+          </ul>
+        </li>
+      </ul>
+      <ol>
+        <li>This list is identical to the one above in every regard but two:
+          this first item is different, and it&rsquo;s an ordered list instead
+          of an unordered list.</li>
+        <li>This is an especially long item in an unordered list, with text
+          that will wrap to multiple lines due to its length.</li>
+        <li>
+          This item includes its own unordered sublist.
+          <ul>
+            <li>This is an item in a sublist.</li>
+            <li>This item is nested within two unordered lists.</li>
+            <li>This is the last itme in the sublist.</li>
+          </ul>
+        </li>
+        <li>
+          This item also has a sublist, but it&rsquo;s an ordered list, rather
+          than an unordered list.
+          <ol>
+            <li>This is the first item in a sublist.</li>
+            <li>This item comes second.</li>
+            <li>And last but not least is this item.</li>
+          </ol>
+        </li>
+        <li>
+          Word processors &mdash; especially early word processors &mdash;
+          could not handle hanging indentation, so they indented lists as a
+          compromise with technical feasibility. In fact, hanging punctuation
+          is typographically correct and, despite how &ldquo;wrong&rdquo; it
+          may feel now, easier to read, because it maintains a consistent left
+          margin to the text.
+          <ul>
+            <li>All that said, we <em>do</em> have to indent sublists.</li>
+            <li>Otherwise, they&rsquo;ll lose all visual distinction, and you
+              won&rsquo;t be able to tell items in the sublist from those in
+              the parent list.</li>
+          </ul>
+        </li>
+      </ol>
+    </main>
+    <script src="/scripts/bundle.js"></script>
+  </body>
+</html>
