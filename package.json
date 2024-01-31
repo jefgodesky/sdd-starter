@@ -30,9 +30,10 @@
     "docs:dev": "chokidar ./docs/*.html -c \"npm run tokens\"",
     "js:dev": "webpack --watch --mode development",
     "sass:dev": "sass --watch --update --style=expanded stylesheets:dist/stylesheets",
-    "tokens": "npm-run-all dist:mkdir tokens:addv tokens:compile",
+    "tokens": "npm-run-all dist:mkdir tokens:addv tokens:compile tokens:copy",
     "tokens:addv": "node --loader ts-node/esm lib/generate-version.ts",
     "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary version.json --html-src docs --html-dist dist",
+    "tokens:copy": "cp tokens.json dist",
     "tokens:dev": "chokidar tokens.json -c \"npm run tokens\""
   },
   "dependencies": {
