@@ -1,0 +1,12 @@
+@use "../modules/spacing";
+@use "../modules/typography";
+
+.cta {
+  display: block;
+  font: typography.$h3;
+  margin: spacing.$vertical spacing.$none;
+
+  &:after {
+    content: " \00BB";
+  }
+}
