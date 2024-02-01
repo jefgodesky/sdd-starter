@@ -1,16 +1,64 @@
+@use 'sass:color';
 @use "sass:map";
 @use "themes";
 
-@mixin set-color($property, $var) {
-  #{$property}: map.get(themes.$themes, "light", $var);
+@function str-split($str, $delimiter) {
+  $index: str-index($str, $delimiter);
+  $pieces: ();
+
+  @while $index != null {
+    $pieces: append($pieces, str-slice($str, 1, $index - 1));
+    $str: str-slice($str, $index + str-length($delimiter));
+    $index: str-index($str, $delimiter);
+  }
+
+  $pieces: append($pieces, $str);
+  @return $pieces;
+}
+
+@function theme-get($path, $theme: "light") {
+  $value: null;
+  $keys: if(type-of($path) == "string", str-split($path, "."), $path);
+  $current-map: map.get(themes.$themes, $theme);
+
+  @each $key in $keys {
+    $value: map.get($current-map, $key);
+    @if type-of($value) == "map" {
+      $current-map: $value;
+    } @else {
+      @return $value;
+    }
+  }
+
+  @warn "The path ${path} does not lead to a valid value in the ${theme} theme.";
+  @return $value;
+}
+
+
+@mixin set-style($property, $var) {
+  #{$property}: theme-get($var, "light");
 
   .dark {
-    #{$property}: map.get(themes.$themes, "dark", $var);
+    #{$property}: theme-get($var, "dark");
   }
 
   @media (prefers-color-scheme: dark) {
     &:not(.light) {
-      #{$property}: map.get(themes.$themes, "dark", $var);
+      #{$property}: theme-get($var, "dark");
+    }
+  }
+}
+
+@mixin ease-color($property, $var, $amount: 50%) {
+  #{$property}: darken(theme-get($var, "light"), $amount);
+
+  .dark {
+    #{$property}: lighten(theme-get($var, "dark"), $amount);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:not(.light) {
+      #{$property}: lighten(theme-get($var, "dark"), $amount);
     }
   }
 }

@@ -1,0 +1,28 @@
+@use "../modules/spacing";
+@use "../modules/mixins";
+
+section.component {
+  margin: spacing.$none;
+  padding: spacing.$vertical spacing.$none;
+
+  summary {
+    @include mixins.ease-color("background", "bg", 15%);
+    cursor: pointer;
+    font-weight: bold;
+    padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
+  }
+
+  details {
+    margin: spacing.$vertical spacing.$none;
+
+    code.block {
+      border-radius: spacing.$none spacing.$none spacing.$text-s spacing.$text-s;
+      margin: spacing.$none;
+    }
+  }
+
+  .example.centered {
+    padding: 1em;
+    text-align: center;
+  }
+}

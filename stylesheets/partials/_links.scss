@@ -1,9 +1,0 @@
-@use "../modules/mixins";
-
-a {
-  @include mixins.set-color("color", "link");
-
-  &:visited { @include mixins.set-color("color", "link-visited"); }
-  &:hover { @include mixins.set-color("color", "link-hover"); }
-  &:active { @include mixins.set-color("color", "link-active"); }
-}

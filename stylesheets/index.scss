@@ -4,7 +4,6 @@
 
 @use "partials/main";
 @use "partials/header";
-@use "partials/links";
 @use "partials/lists";
 @use "partials/typography";
 
@@ -12,10 +11,12 @@
 @use "modules/placeholders";
 
 @use "components/code-blocks";
+@use "components/component-doc";
+@use "components/links";
 
 body {
-  @include mixins.set-color("background-color", "bg");
-  @include mixins.set-color("color", "fg");
+  @include mixins.set-style("background-color", "bg");
+  @include mixins.set-style("color", "fg");
 
   @media not (prefers-color-scheme: dark) {
     @include prism.default();

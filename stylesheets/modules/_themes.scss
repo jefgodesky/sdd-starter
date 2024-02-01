@@ -1,3 +1,4 @@
+@use "borders";
 @use "colors";
 
 $themes: (
@@ -7,7 +8,10 @@ $themes: (
     "link-base": colors.$light-link,
     "link-hover": colors.$light-link-hover,
     "link-active": colors.$light-link-active,
-    "link-visited": colors.$light-link-visited
+    "link-visited": colors.$light-link-visited,
+    "borders": (
+      "hairline": borders.$light-hairline
+    )
   ),
   "dark": (
     "bg": colors.$dark-bg,
@@ -15,6 +19,9 @@ $themes: (
     "link-base": colors.$dark-link,
     "link-hover": colors.$dark-link-hover,
     "link-active": colors.$dark-link-active,
-    "link-visited": colors.$dark-link-visited
+    "link-visited": colors.$dark-link-visited,
+    "borders": (
+      "hairline": borders.$dark-hairline
+    )
   )
 )
