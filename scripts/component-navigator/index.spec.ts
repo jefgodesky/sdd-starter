@@ -14,14 +14,14 @@ describe('initComponentNavigator', () => {
   })
 
   it('populates the component navigator element', () => {
-    expect(select).toHaveLength(4)
+    expect(select).toHaveLength(5)
   })
 
   it('lists uncategorized components on the page', () => {
     const options = selector('#component-navigator > select > option')
-    const first = options === null ? null : options[0] as HTMLOptionElement
-    expect(options).toHaveLength(1)
-    expect(first?.innerHTML).toEqual('Component D')
+    const second = options === null ? null : options[1] as HTMLOptionElement
+    expect(options).toHaveLength(2)
+    expect(second?.innerHTML).toEqual('Component D')
   })
 
   it('jumps to the selected option', () => {

@@ -8,6 +8,9 @@ const createSelect = (): HTMLSelectElement => {
   const components = parseComponents()
   if (components === null) return select
 
+  const open = create({ tag: 'option', attrs: { value: '' }, text: 'Select a component' })
+  select.appendChild(open)
+
   const categories = Object.keys(components).filter(category => category !== 'Uncategorized')
   const groups = categories.map(category => createOptGroup(category, components[category]))
   for (const group of groups) select.appendChild(group)
