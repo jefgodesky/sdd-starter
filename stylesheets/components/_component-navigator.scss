@@ -1,0 +1,5 @@
+@use "../modules/spacing";
+
+#component-navigator {
+  margin: spacing.$vertical spacing.$none;
+}
