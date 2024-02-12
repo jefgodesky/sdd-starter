@@ -25,3 +25,4 @@ const parseComponents = (): ComponentMap | null => {
 }
 
 export default parseComponents
+export { ComponentMap, ComponentCategory }
