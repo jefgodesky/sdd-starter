@@ -8,6 +8,12 @@ describe('selector', () => {
     expect(check.join(' ')).toEqual('P P P')
   })
 
+  it('returns ID', () => {
+    document.body.innerHTML = '<div id="test"></div>'
+    const actual = selector('#test')
+    expect(actual).toHaveLength(1)
+  })
+
   it('returns null if nothing matches', () => {
     document.body.innerHTML = '<p>1</p><p>2</p><p>3</p>'
     const actual = selector('ol')
