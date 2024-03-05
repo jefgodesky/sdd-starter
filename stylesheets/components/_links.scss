@@ -3,7 +3,7 @@
 a {
   @include mixins.set-style("color", "link");
 
-  &:visited { @include mixins.set-style("color", "link-visited"); }
-  &:hover { @include mixins.set-style("color", "link-hover"); }
-  &:active { @include mixins.set-style("color", "link-active"); }
+  &:visited { @include mixins.set-style("color", "links.visited"); }
+  &:hover { @include mixins.set-style("color", "links.hover"); }
+  &:active { @include mixins.set-style("color", "links.active"); }
 }

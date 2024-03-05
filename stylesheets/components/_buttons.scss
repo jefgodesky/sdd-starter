@@ -1,0 +1,61 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+
+button {
+  @include mixins.set-style("background", "buttons.base.face");
+  @include mixins.set-style("border-color", "buttons.base.face");
+  @include mixins.set-style("color", "buttons.base.text");
+  appearance: none;
+  border-style: solid;
+  border-width: calc(#{spacing.$text-xs} / 2);
+  border-radius: spacing.$text-xs;
+  cursor: pointer;
+  font-weight: bold;
+  margin: spacing.$text-xs;
+  padding: spacing.$text-xs spacing.$text-l;
+
+  &:hover {
+    @include mixins.set-style("background", "buttons.hover.face");
+    @include mixins.set-style("border-color", "buttons.hover.face");
+    @include mixins.set-style("color", "buttons.hover.text");
+  }
+
+  &:active {
+    @include mixins.set-style("background", "buttons.active.face");
+    @include mixins.set-style("border-color", "buttons.active.face");
+    @include mixins.set-style("color", "buttons.active.text");
+  }
+
+  &.secondary {
+    @include mixins.set-style("color", "buttons.base.face");
+    background: transparent;
+
+    &:hover {
+      @include mixins.set-style("border-color", "buttons.hover.face");
+      @include mixins.set-style("color", "buttons.hover.face");
+      background: transparent;
+    }
+
+    &:active {
+      @include mixins.set-style("border-color", "buttons.active.face");
+      @include mixins.set-style("color", "buttons.active.face");
+      background: transparent;
+    }
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    @include mixins.set-style("background", "buttons.base.face", desaturate, desaturate, 100%);
+    @include mixins.set-style("border-color", "buttons.base.face", desaturate, desaturate, 100%);
+    @include mixins.set-style("color", "buttons.base.text", desaturate, desaturate, 100%);
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &.secondary {
+      @include mixins.set-style("border-color", "buttons.base.face", desaturate, desaturate, 100%);
+      @include mixins.set-style("color", "buttons.base.face", desaturate, desaturate, 100%);
+      background: transparent;
+    }
+  }
+}

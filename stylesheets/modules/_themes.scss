@@ -5,10 +5,26 @@ $themes: (
   "light": (
     "bg": colors.$light-bg,
     "fg": colors.$light-fg,
-    "link-base": colors.$light-link,
-    "link-hover": colors.$light-link-hover,
-    "link-active": colors.$light-link-active,
-    "link-visited": colors.$light-link-visited,
+    "links": (
+      "base": colors.$light-link,
+      "hover": colors.$light-link-hover,
+      "active": colors.$light-link-active,
+      "visited": colors.$light-link-visited
+    ),
+    "buttons": (
+      "base": (
+        "face": colors.$light-button-face-base,
+        "text": colors.$light-button-text-base
+      ),
+      "hover": (
+        "face": colors.$light-button-face-hover,
+        "text": colors.$light-button-text-hover
+      ),
+      "active": (
+        "face": colors.$light-button-face-active,
+        "text": colors.$light-button-text-active
+      )
+    ),
     "borders": (
       "hairline": borders.$light-hairline
     )
@@ -16,10 +32,26 @@ $themes: (
   "dark": (
     "bg": colors.$dark-bg,
     "fg": colors.$dark-fg,
-    "link-base": colors.$dark-link,
-    "link-hover": colors.$dark-link-hover,
-    "link-active": colors.$dark-link-active,
-    "link-visited": colors.$dark-link-visited,
+    "links": (
+      "base": colors.$dark-link,
+      "hover": colors.$dark-link-hover,
+      "active": colors.$dark-link-active,
+      "visited": colors.$dark-link-visited
+    ),
+    "buttons": (
+      "base": (
+        "face": colors.$dark-button-face-base,
+        "text": colors.$dark-button-text-base
+      ),
+      "hover": (
+        "face": colors.$dark-button-face-hover,
+        "text": colors.$dark-button-text-hover
+      ),
+      "active": (
+        "face": colors.$dark-button-face-active,
+        "text": colors.$dark-button-text-active
+      )
+    ),
     "borders": (
       "hairline": borders.$dark-hairline
     )

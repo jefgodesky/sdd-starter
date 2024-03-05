@@ -83,6 +83,41 @@
             instead.</li>
         </ul>
       </section>
+      <section id="component-button" class="component" data-component-category="Navigation">
+        <h2>Button</h2>
+        <div class="example centered">
+          <button>Primary Button</button>
+          <button class="secondary">Secondary Button</button>
+          <button disabled>Disabled Primary Button</button>
+          <button class="secondary" disabled>Disabled Secondary Button</button>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;button&gt;Primary Button&lt;/button&gt;
+&lt;button class="secondary"&gt;Second Button&lt;/button&gt;
+&lt;button disabled&gt;Disabled Primary Button&lt;/button&gt;
+&lt;button class="secondary" disabled&gt;Disabled Secondary Button&lt;/button&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Buttons <em>do things</em>, while <a href="#component-link">links</a>
+            <em>go places</em>. The difference is that buttons change the state
+            of the website. That can be on the server side or the client side,
+            but a button implies that some action is being taken, and something,
+            somewhere is different now. Links take you somewhere else, but
+            neither the place you were nor the place you’re going have
+            changed when you do so.</li>
+          <li>Yes, buttons are routinely abused to work as just bigger, more
+            prominent links &mdash; usually along with other bad design
+            decisions that visually mark almost all the items on a page as
+            the most important thing, creating frustration and increasing the
+            user&rsquo;s cognitive load. It&rsquo;s a terrible practice, and
+            just because it&rsquo;s common is no reason to do it.</li>
+          <li>In places where you might be tempted to use a button to go
+            somewhere because the link should be visually prominent, consider
+            using the <a href="#component-cta">prominent link</a>
+            component instead.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/bundle.js"></script>
   </body>
