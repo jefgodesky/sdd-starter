@@ -1,0 +1,26 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+label {
+  cursor: pointer;
+  display: block;
+  font: typography.$h4;
+  margin: calc(#{spacing.$vertical} /2) spacing.$none spacing.$none spacing.$none;
+
+  &.error {
+    @include mixins.set-style("color", "error");
+  }
+
+  .note {
+    display: block;
+    font-size: spacing.$text-s;
+    font-weight: normal;
+  }
+}
+
+.msg.error {
+  @include mixins.set-style("color", "error");
+  font-size: spacing.$text-s;
+  margin: spacing.$none spacing.$none spacing.$vertical spacing.$none;
+}
