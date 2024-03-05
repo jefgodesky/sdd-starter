@@ -1,0 +1,24 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+
+input {
+  @include mixins.set-style("background", "bg", darken, lighten, 15%);
+  @include mixins.set-style("border-color", "fg");
+  @include mixins.set-style("color", "fg");
+  appearance: none;
+  border-width: spacing.$hairline;
+  margin: calc(#{spacing.$vertical} / 4) spacing.$none;
+  outline: none;
+  padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
+  width: 100%;
+
+  &.error {
+    @include mixins.set-style("border-color", "error");
+    @include mixins.set-style("color", "error");
+  }
+
+  &:active,
+  &:focus {
+    @include mixins.set-style("border-color", "links.base");
+  }
+}

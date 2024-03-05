@@ -118,6 +118,65 @@
             component instead.</li>
         </ul>
       </section>
+      <section id="component-text-input" class="component" data-component-category="Forms">
+        <h2>Text Input</h2>
+        <div class="example">
+          <input type="text" placeholder="Text input">
+          <input type="email" placeholder="you@example.com">
+          <input type="search" placeholder="Your search terms...">
+          <input type="tel" placeholder="1 (212) 867-5309">
+          <input type="url" placeholder="https://example.com">
+          <input type="number" value="0" min="0" max="10">
+          <input type="text" placeholder="Text input" value="Error!" class="error">
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;input type="text" placeholder="Text input"&gt;
+&lt;input type="email" placeholder="you@example.com"&gt;
+&lt;input type="search" placeholder="Your search terms..."&gt;
+&lt;input type="tel" placeholder="1 (212) 867-5309"&gt;
+&lt;input type="url" placeholder="https://example.com"&gt;
+&lt;input type="number" value="0" min="0" max="10"&gt;
+&lt;input type="text" placeholder="Text input" value="Error!" class="error"&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Do <strong>not</strong> use placeholders in place of
+            <a href="#component-label">labels</a>. When you begin typing in a
+            text box, the text disappears, so if you forget precisely what you
+            need to enter in this box, you’ll need to remove what
+            you’ve written. Placeholders aren’t designed to take
+            the place of labels; that’s what labels are for. Placeholders
+            should be used to provide an example of the sort of input a user
+            should provide in the box.</li>
+          <li>The text input is the most generic of the fields provided here.
+            This is appropriate for fields that need to collect a piece of
+            arbitrary short text. Wherever appropriate, use one of the more
+            specific fields detailed here. The text input is the default option
+            that you can use when none of the other options quite fit. When
+            asking the user for text that you expect to exceed more than a
+            dozen or so characters, use the <a href="#component-textarea">text area</a>
+            component instead.</li>
+          <li>The email input is the field you should use when you ask the
+            user to enter an email address. Though this may look the same on a
+            desktop browser, the specialized field can prompt a variety of
+            affordances. For example, on iOS Safari, the email field brings up
+            a different keyboard, with special <em>@</em> and <em>.com</em>
+            buttons that make typing an email address more convenient.</li>
+          <li>The search input is the field you should use when you ask the
+            user to enter a search query.</li>
+          <li>The telephone input is the field you should use if you ever
+            need to ask the user to enter a telephone number.</li>
+          <li>The URL input is the field you should use when you ask the
+            user to enter a URL.</li>
+          <li>The number input is the field you should use when you ask the
+            user to enter a number.</li>
+          <li>Never ask for more data than you actually need. Every additional
+            field on a form increases the interaction cost, reducing the
+            likelihood that you’ll get any response at all. Interrogate
+            every field to determine if it’s something you really need,
+            and eliminate everything that is not absolutely necessary in order
+            to provide the service that you wish to provide.</li>
+        </ul>
     </main>
     <script src="/scripts/bundle.js"></script>
   </body>

@@ -5,6 +5,7 @@ $themes: (
   "light": (
     "bg": colors.$light-bg,
     "fg": colors.$light-fg,
+    "error": colors.$light-error,
     "links": (
       "base": colors.$light-link,
       "hover": colors.$light-link-hover,
@@ -32,6 +33,7 @@ $themes: (
   "dark": (
     "bg": colors.$dark-bg,
     "fg": colors.$dark-fg,
+    "error": colors.$dark-error,
     "links": (
       "base": colors.$dark-link,
       "hover": colors.$dark-link-hover,

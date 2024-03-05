@@ -16,6 +16,7 @@
 @use "components/component-navigator";
 @use "components/cta";
 @use "components/links";
+@use "components/text-input";
 
 body {
   @include mixins.set-style("background-color", "bg");
