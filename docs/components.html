@@ -394,6 +394,69 @@
           </li>
         </ul>
       </section>
+      <section id="component-checkboxes" class="component" data-component-category="Forms">
+        <h2>Checkboxes</h2>
+        <div class="example">
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="designer" id="checkbox-example-designer">
+            Designer
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="frontend-developer" id="checkbox-example-frontend-developer">
+            Frontend Developer
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="backend-developer" id="checkbox-example-backend-developer">
+            Backend Developer
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="fullstack-developer" id="checkbox-example-fullstack-developer">
+            Full Stack Developer
+          </label>
+          <label class="checkbox extended">
+            <input type="checkbox" name="checkbox-example" value="extended" id="checkbox-example-extended">
+            Actually, I&rsquo;m a full-blown, full-stack developer/full-stack
+            designer/UX researcher/product manager/agility coach/DevOps
+            engineer/ninja/rock star/barista/mime/eldritch horror unicorn.
+          </label>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="designer" id="checkbox-example-designer"&gt;
+  Designer
+&lt;/label&gt;
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="frontend-developer" id="checkbox-example-frontend-developer"&gt;
+  Frontend Developer
+&lt;/label&gt;
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="backend-developer" id="checkbox-example-backend-developer"&gt;
+  Backend Developer
+&lt;/label&gt;
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="fullstack-developer" id="checkbox-example-fullstack-developer"&gt;
+  Full Stack Developer
+&lt;/label&gt;
+&lt;label class="checkbox extended"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="extended" id="checkbox-example-extended"&gt;
+  Actually...
+&lt;/label&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Use a set of checkboxes when you would like a user to choose one
+            or more options from a set list of options.</li>
+          <li>You can also use a single checkbox on its own to capture a
+            boolean value from a user, like opting in to an agreement.</li>
+          <li>If you use a checkbox to gather consent or agreement from a user,
+            it <strong>cannot</strong> be checked by default. Consent is
+            <em>only</em> ethical or binding when it is freely and consciously
+            given. It is entirely too easy for a user to submit a form without
+            noticing a checkbox that is marked by default. Besides being a
+            deeply unethical dark pattern or ”antipattern,“ in many
+            legal jurisdictions this will not stand up as legal consent.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/bundle.js"></script>
   </body>

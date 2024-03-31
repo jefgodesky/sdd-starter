@@ -1,0 +1,22 @@
+@use "../modules/mixins";
+@use "../modules/placeholders";
+@use "../modules/spacing";
+
+input[type="checkbox"] {
+  @extend %toggle-input;
+  border-radius: spacing.$none;
+
+  &:checked:after {
+    @include mixins.set-style("color", "links.base");
+    background: transparent;
+    content: '\2713';
+    font-weight: bold;
+    height: spacing.$text-m;
+    margin: 0;
+    width: spacing.$text-m;
+  }
+}
+
+label.checkbox {
+  @extend %toggle-input-label;
+}

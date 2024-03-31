@@ -1,4 +1,5 @@
 @use "./breakpoints";
+@use "./mixins";
 @use "./spacing";
 
 %layout {
@@ -10,4 +11,39 @@
 %breakout {
   margin: spacing.$vertical calc(-1 * (50vw - 50% - (var(--scrollbar-width, 17px) / 2)));
   padding: spacing.$vertical calc(50vw - 50% - (var(--scrollbar-width, 17px) / 2));
+}
+
+%toggle-input {
+  $diff: calc(#{spacing.$text-m} - #{spacing.$text-s});
+  $padding: calc((#{$diff} / 2) - #{spacing.$hairline});
+
+  border-radius: calc(#{spacing.$text-m} / 2);
+  height: spacing.$text-m;
+  padding: spacing.$none;
+  width: spacing.$text-m;
+
+  &:checked:after {
+    @include mixins.set-style("background", "links.base");
+    border-radius: calc(#{spacing.$text-s} / 2);
+    content: '';
+    display: block;
+    height: spacing.$text-s;
+    margin: $padding spacing.$none spacing.$none $padding;
+    padding: spacing.$none;
+    width: spacing.$text-s;
+  }
+}
+
+%toggle-input-label {
+  margin: spacing.$vertical spacing.$none;
+  padding: spacing.$none spacing.$none spacing.$none calc(#{spacing.$text-m} * 1.5);
+
+  input {
+    float: left;
+    margin: spacing.$none spacing.$none spacing.$none calc(#{spacing.$text-m} * -1.5);
+  }
+
+  &.extended {
+    font-weight: normal;
+  }
 }
