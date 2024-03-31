@@ -14,7 +14,7 @@
 }
 
 %toggle-input {
-  $diff: calc(#{spacing.$text-m} - #{spacing.$text-s});
+  $diff: calc(#{spacing.$text-m} - #{spacing.$text-xs});
   $padding: calc((#{$diff} / 2) - #{spacing.$hairline});
 
   border-radius: calc(#{spacing.$text-m} / 2);
@@ -24,13 +24,13 @@
 
   &:checked:after {
     @include mixins.set-style("background", "links.base");
-    border-radius: calc(#{spacing.$text-s} / 2);
+    border-radius: calc(#{spacing.$text-xs} / 2);
     content: '';
     display: block;
-    height: spacing.$text-s;
+    height: spacing.$text-xs;
     margin: $padding spacing.$none spacing.$none $padding;
     padding: spacing.$none;
-    width: spacing.$text-s;
+    width: spacing.$text-xs;
   }
 }
 
