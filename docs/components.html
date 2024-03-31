@@ -283,6 +283,54 @@
             forms.</li>
         </ul>
       </section>
+      <section id="component-dropdown" class="component" data-component-category="Forms">
+        <h2>Dropdown</h2>
+        <div class="example">
+          <select>
+            <optgroup label="Primary Colors">
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </optgroup>
+            <optgroup label="Secondary Colors">
+              <option value="orange">Orange</option>
+              <option value="yellow">Yellow</option>
+              <option value="purple">Purple</option>
+            </optgroup>
+          </select>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;select&gt;
+  &lt;optgroup label="Primary Colors"&gt;
+    &lt;option value="red"&gt;Red&lt;/option&gt;
+    &lt;option value="blue"&gt;Blue&lt;/option&gt;
+    &lt;option value="green"&gt;Green&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Secondary Colors"&gt;
+    &lt;option value="orange"&gt;Orange&lt;/option&gt;
+    &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
+    &lt;option value="purple"&gt;Purple&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Use a dropdown when you would like a user to choose a single
+            option from a set list of options. When to use a dropdown and
+            when to use a set of <a href="#component-radio">radio buttons</a>
+            can be subtle, but some reasons to prefer a dropdown over
+            radio buttons include:
+            <ul>
+              <li>When there is a clear default, recommended, or most common
+                option (which you should have selected by default).</li>
+              <li>There are quite a few options to choose from, but it’s
+                easy for users to notice the pattern and predict what the
+                available options will be (e.g., a list of countries).</li>
+              <li>When you have more than seven options to choose between.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/bundle.js"></script>
   </body>
