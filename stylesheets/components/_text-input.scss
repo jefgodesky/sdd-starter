@@ -3,10 +3,9 @@
 
 input {
   @include mixins.set-style("background", "bg", darken, lighten, 15%);
-  @include mixins.set-style("border-color", "fg");
+  @include mixins.set-style("border", "borders.hairline");
   @include mixins.set-style("color", "fg");
   appearance: none;
-  border-width: spacing.$hairline;
   margin: calc(#{spacing.$vertical} / 4) spacing.$none;
   outline: none;
   padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
