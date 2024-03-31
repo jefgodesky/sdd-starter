@@ -1,0 +1,15 @@
+@use "../modules/spacing";
+@use "./text-input";
+
+textarea {
+  @extend input;
+  height: calc(#{spacing.$vertical} * 4);
+
+  &.sm {
+    height: calc(#{spacing.$vertical} * 2);
+  }
+
+  &.lg {
+    height: calc(#{spacing.$vertical} * 6);
+  }
+}

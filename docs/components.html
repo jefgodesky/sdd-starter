@@ -228,6 +228,31 @@
             occurred and what options the user has to rectify it.</li>
         </ul>
       </section>
+      <section id="component-textarea" class="component" data-component-category="Forms">
+        <h2>Text Area</h2>
+        <div class="example">
+          <textarea class="sm">This is a small text area.</textarea>
+          <textarea>This is the standard text area.</textarea>
+          <textarea class="lg">This is a large text area.</textarea>
+          <textarea class="error">This is the standard text area in an error state.</textarea>
+          <textarea maxlength="256">This is a standard text area with a maximum length of 256 characters.</textarea>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;textarea class="sm"&gt;This is a small text area.&lt;/textarea&gt;
+&lt;textarea&gt;This is the standard text area.&lt;/textarea&gt;
+&lt;textarea class="lg"&gt;This is a large text area.&lt;/textarea&gt;
+&lt;textarea maxlength="256"&gt;This is a standard text area with a maximum length of 256 characters.&lt;/textarea&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The text area input is appropriate when you’re asking a
+            user to enter a significant amount of text (anything more than a
+            dozen or so characters). For short bits of text, you can use a
+            <a href="#component-input">text input</a> field.</li>
+          <li>Just like other form elements, text areas should appear with a
+            concise and informative <a href="#component-label">label</a>.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/bundle.js"></script>
   </body>
