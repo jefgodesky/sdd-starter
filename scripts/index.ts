@@ -10,7 +10,8 @@ interface ModuleConfig {
 
 const modules: ModuleConfig[] = [
   { elems: selector('code.block'), name: 'code' },
-  { elems: selector('#component-navigator'), name: 'component-navigator' }
+  { elems: selector('#component-navigator'), name: 'component-navigator' },
+  { elems: selector('textarea[maxlength]'), name: 'character-count' }
 ]
 
 const loadModules = async (configs: ModuleConfig[]): Promise<void> => {

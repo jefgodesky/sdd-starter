@@ -1,4 +1,5 @@
 @use "../modules/spacing";
+@use "../modules/typography";
 @use "./text-input";
 
 textarea {
@@ -11,5 +12,15 @@ textarea {
 
   &.lg {
     height: calc(#{spacing.$vertical} * 6);
+  }
+
+  &:has(+ p.character-count) {
+    margin-bottom: spacing.$none;
+  }
+
+  & + p.character-count {
+    font: typography.$fine;
+    margin-top: spacing.$none;
+    text-align: right;
   }
 }
