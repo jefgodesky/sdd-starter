@@ -48,13 +48,15 @@
 
   #{$property}: $light;
 
-  .dark {
+  @media (prefers-color-scheme: dark) {
     #{$property}: $dark;
   }
 
-  @media (prefers-color-scheme: dark) {
-    &:not(.light) {
-      #{$property}: $dark;
-    }
+  .light & {
+    #{$property}: $light;
+  }
+
+  .dark & {
+    #{$property}: $dark;
   }
 }
