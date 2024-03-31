@@ -19,6 +19,7 @@
 @use "components/text-input";
 @use "components/textarea";
 @use "components/label";
+@use "components/input-button";
 
 body {
   @include mixins.set-style("background-color", "bg");
