@@ -21,6 +21,7 @@
 @use "components/label";
 @use "components/input-button";
 @use "components/dropdown";
+@use "components/radio";
 
 body {
   @include mixins.set-style("background-color", "bg");

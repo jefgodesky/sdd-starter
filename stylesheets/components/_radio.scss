@@ -1,0 +1,37 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+
+$diff: calc(#{spacing.$text-m} - #{spacing.$text-s});
+$padding: calc((#{$diff} / 2) - #{spacing.$hairline});
+
+input[type="radio"] {
+  border-radius: calc(#{spacing.$text-m} / 2);
+  height: spacing.$text-m;
+  padding: spacing.$none;
+  width: spacing.$text-m;
+
+  &:checked:after {
+    @include mixins.set-style("background", "links.base");
+    border-radius: calc(#{spacing.$text-s} / 2);
+    content: '';
+    display: block;
+    height: spacing.$text-s;
+    margin: $padding spacing.$none spacing.$none $padding;
+    padding: spacing.$none;
+    width: spacing.$text-s;
+  }
+}
+
+label.radio {
+  margin: spacing.$vertical spacing.$none;
+  padding: spacing.$none spacing.$none spacing.$none calc(#{spacing.$text-m} * 1.5);
+
+  input[type="radio"] {
+    float: left;
+    margin: spacing.$none spacing.$none spacing.$none calc(#{spacing.$text-m} * -1.5);
+  }
+
+  &.extended {
+    font-weight: normal;
+  }
+}
