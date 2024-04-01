@@ -13,6 +13,12 @@
   padding: spacing.$vertical calc(50vw - 50% - (var(--scrollbar-width, 17px) / 2));
 }
 
+%unstyled-list {
+  list-style-type: none;
+  margin: spacing.$none;
+  padding: spacing.$none;
+}
+
 %toggle-input {
   $diff: calc(#{spacing.$text-m} - #{spacing.$text-xs});
   $padding: calc((#{$diff} / 2) - #{spacing.$hairline});

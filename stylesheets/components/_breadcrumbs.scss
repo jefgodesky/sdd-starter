@@ -1,0 +1,24 @@
+@use "../modules/placeholders";
+@use "../modules/spacing";
+
+nav.breadcrumbs {
+  @extend %layout;
+  padding-bottom: spacing.$none;
+
+  ul {
+    @extend %unstyled-list;
+  }
+
+  li {
+    display: inline;
+  }
+
+  li + li:before {
+    content: '\00BB';
+    margin: spacing.$none calc(#{spacing.$text-xs} / 2);
+  }
+
+  .current {
+    font-weight: bold;
+  }
+}

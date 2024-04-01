@@ -83,6 +83,36 @@
             instead.</li>
         </ul>
       </section>
+      <section id="component-breadcrumbs" class="component" data-component-category="Navigation">
+        <h2>Breadcrumbs</h2>
+        <div class="example">
+          <nav class="breadcrumbs">
+            <ul>
+              <li><a href="index.html">An SDD Design System</a></li>
+              <li class="current">Components</li>
+            </ul>
+          </nav>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;nav class="breadcrumbs"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;An SDD Design System&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="current"&gt;Components&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Only one set of breadcrumbs should appear on a page. Place it
+            before the <code>&lt;main&gt;</code> content (including the page
+            header).</li>
+          <li>Each of the steps in the site architecture leading to the page
+            should appear in the breadcrumbs, starting with the home page
+            and ending with the current page. The current page should be marked
+            with the <code>.current</code> class, and each step before it
+            should be a link to the specified page.</li>
+        </ul>
+      </section>
       <section id="component-button" class="component" data-component-category="Forms">
         <h2>Button</h2>
         <div class="example centered">
