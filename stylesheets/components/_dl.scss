@@ -1,0 +1,13 @@
+@use "../modules/spacing";
+
+dl {
+  margin: spacing.$text-m spacing.$none;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd + dt {
+  margin-top: spacing.$text-m;
+}

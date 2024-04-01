@@ -25,6 +25,7 @@
 @use "components/radio";
 @use "components/checkbox";
 @use "components/table";
+@use "components/dl";
 
 body {
   @include mixins.set-style("background-color", "bg");
