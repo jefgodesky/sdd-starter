@@ -1,0 +1,38 @@
+@use "../modules/breakpoints";
+@use "../modules/mixins";
+@use "../modules/placeholders";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+.swatch {
+  h4 {
+    align-items: flex-end;
+    display: flex;
+    height: calc(#{spacing.$vertical} * 3);
+    padding: spacing.$text-m;
+  }
+
+  dl {
+    @include mixins.set-style("background", "off-bg");
+    @include mixins.set-style("color", "fg");
+    @extend %vartable;
+    font: typography.$fine;
+    padding: spacing.$text-m;
+    margin: spacing.$none;
+  }
+}
+
+@media (min-width: breakpoints.$desktop) {
+  @supports (display: grid) {
+    .swatches {
+      display: grid;
+      grid-template-columns: calc(50% - (#{spacing.$text-m} / 2)) calc(50% - (#{spacing.$text-m} / 2));
+      grid-gap: spacing.$text-m;
+      margin: spacing.$text-m spacing.$none;
+
+      .swatch {
+        margin: 0;
+      }
+    }
+  }
+}

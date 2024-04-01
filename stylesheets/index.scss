@@ -27,6 +27,7 @@
 @use "components/table";
 @use "components/dl";
 @use "components/vartable";
+@use "components/swatch";
 
 body {
   @include mixins.set-style("background-color", "bg");
