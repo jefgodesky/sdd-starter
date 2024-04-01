@@ -53,3 +53,18 @@
     font-weight: normal;
   }
 }
+
+%vartable {
+  display: grid;
+  grid-template-columns: fit-content(spacing.$horizontal) 1fr;
+  grid-gap: spacing.$text-xs spacing.$text-m;
+
+  dt,
+  dd + dt {
+    margin: spacing.$none;
+  }
+
+  dd {
+    margin: spacing.$none;
+  }
+}

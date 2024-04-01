@@ -644,6 +644,44 @@
             align semantically with this original use case.</li>
         </ul>
       </section>
+      <section id="component-vartable" class="component" data-component-category="Content">
+        <h2>Variable Definition Table</h2>
+        <div class="example">
+          <dl class="vartable">
+            <dt>Hex</dt>
+            <dd>#000000</dd>
+            <dt>RGBA</dt>
+            <dd>0, 0, 0, 1</dd>
+            <dt>CMYKA</dt>
+            <dd>0, 0, 0, 100, 1</dd>
+            <dt>HSLA</dt>
+            <dd>0&deg;, 0, 0, 1</dd>
+            <dt>HSVA</dt>
+            <dd>0&deg;, 0, 0, 1</dd>
+          </dl>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;dl class="vartable"&gt;
+  &lt;dt&gt;Hex&lt;/dt&gt;
+  &lt;dd&gt;#000000&lt;/dd&gt;
+  &lt;dt&gt;RGBA&lt;/dt&gt;
+  &lt;dd&gt;0, 0, 0, 1&lt;/dd&gt;
+  &lt;dt&gt;CMYKA&lt;/dt&gt;
+  &lt;dd&gt;0, 0, 0, 100, 1&lt;/dd&gt;
+  &lt;dt&gt;HSLA&lt;/dt&gt;
+  &lt;dd&gt;0&amp;deg;, 0, 0, 1&lt;/dd&gt;
+  &lt;dt&gt;HSVA&lt;/dt&gt;
+  &lt;dd&gt;0&amp;deg;, 0, 0, 1&lt;/dd&gt;
+&lt;/dl&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The variable definition table is derived from the
+            <a href="#component-dl">definition list</a> component for
+            situations where the definition is particularly short, as with
+            variable definitions.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/bundle.js"></script>
   </body>
