@@ -1,0 +1,49 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+body {
+  counter-reset: tables;
+}
+
+table {
+  border-collapse: collapse;
+  margin: spacing.$text-m calc(#{spacing.$text-xs} * -1);
+  width: calc(100% + (#{spacing.$text-xs} * 2));
+}
+
+tcaption {
+  display: block;
+  font-weight: bold;
+  margin: spacing.$text-m spacing.$none spacing.$none spacing.$none;
+
+  &:not(.uncounted):before {
+    counter-increment: tables;
+    content: 'Table ' counter(tables) '. ';
+  }
+}
+
+th {
+  @include mixins.set-style("border-bottom", "borders.th");
+  font-weight: bold;
+  text-align: left;
+}
+
+th,
+td {
+  padding: spacing.$text-xs;
+
+  &.num,
+  &.short {
+    text-align: center;
+  }
+}
+
+tbody tr:nth-child(even) td {
+  @include mixins.set-style("background", "off-bg");
+}
+
+tfoot {
+  @include mixins.set-style("border-top", "borders.th");
+  font: typography.$fine;
+}

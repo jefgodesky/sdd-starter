@@ -5,6 +5,7 @@ $themes: (
   "light": (
     "bg": colors.$light-bg,
     "fg": colors.$light-fg,
+    "off-bg": colors.$light-off-bg,
     "error": colors.$light-error,
     "links": (
       "base": colors.$light-link,
@@ -27,12 +28,15 @@ $themes: (
       )
     ),
     "borders": (
-      "hairline": borders.$light-hairline
+      "hairline": borders.$light-hairline,
+      "th": borders.$light-th,
+      "tfoot": borders.$light-tfoot
     )
   ),
   "dark": (
     "bg": colors.$dark-bg,
     "fg": colors.$dark-fg,
+    "off-bg": colors.$dark-off-bg,
     "error": colors.$dark-error,
     "links": (
       "base": colors.$dark-link,
@@ -55,7 +59,9 @@ $themes: (
       )
     ),
     "borders": (
-      "hairline": borders.$dark-hairline
+      "hairline": borders.$dark-hairline,
+      "th": borders.$dark-th,
+      "tfoot": borders.$dark-tfoot
     )
   )
 )
