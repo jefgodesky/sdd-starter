@@ -1,0 +1,12 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+
+.toc {
+  @include mixins.set-style("background", "off-bg");
+  margin: spacing.$vertical calc(#{spacing.$horizontal} * -0.5);
+  padding: calc(#{spacing.$vertical} / 2) calc(#{spacing.$horizontal} / 2);
+
+  h4 {
+    margin-top: spacing.$none;
+  }
+}
