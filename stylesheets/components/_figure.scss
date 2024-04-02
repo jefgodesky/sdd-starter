@@ -20,6 +20,7 @@ figure {
   margin: spacing.$vertical spacing.$none;
 
   img,
+  iframe.video,
   code[class*=language-].block {
     margin: spacing.$none;
   }

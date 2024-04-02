@@ -1,0 +1,7 @@
+@use "../modules/spacing";
+
+iframe.video {
+  aspect-ratio: 16 / 9;
+  margin: spacing.$vertical spacing.$none;
+  width: 100%;
+}

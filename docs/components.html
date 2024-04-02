@@ -753,6 +753,28 @@
             the image doesn&rsquo;t have one.</li>
         </ul>
       </section>
+      <section id="component-video" class="component" data-component-category="Media">
+        <h2>Embedded Video</h2>
+        <div class="example">
+          <iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The embed code provided by a service like <a href="https://www.youtube.com/">YouTube</a>
+            will typically include <code>height</code> and <code>width</code>
+            attributes. These must be removed, or those values will override
+            the component styling, giving the video a fixed size instead of
+            responding to the space available on the given device.</li>
+          <li>In addition to removing <code>height</code> and <code>width</code>
+            attributes, you must also add <code>class="video"</code>, as in
+            the example above.</li>
+          <li>Embedded video can also be used in a <a href="#component-figure">figure</a>
+            to provide a caption.</li>
+        </ul>
+      </section>
       <section id="component-figure" class="component" data-component-category="Media">
         <h2>Figure</h2>
         <div class="example">
@@ -762,22 +784,34 @@
           </figure>
           <figure>
             <code class="language-html block">&lt;figure&gt;
-  &lt;img src="/images/cat.jpg" alt="Kitteh" /&gt;
-  &lt;figcaption&gt;Adorable kitteh.&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
+              &lt;img src="/images/cat.jpg" alt="Kitteh" /&gt;
+              &lt;figcaption&gt;Adorable kitteh.&lt;/figcaption&gt;
+              &lt;/figure&gt;</code>
             <figcaption class="uncounted">Example markup for the figure component.</figcaption>
+          </figure>
+          <figure>
+            <iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>&ldquo;Me at the Zoo&rdquo; was the first video uploaded to <a href="https://www.youtube.com/">YouTube</a>.</figcaption>
           </figure>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="language-html block">&lt;figure&gt;
+          <code class="language-html block">&lt;!-- Image example --&gt;
+&lt;figure&gt;
   &lt;img src="/images/cat.jpg" alt="Kitteh" /&gt;
   &lt;figcaption&gt;Adorable kitteh.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
+&lt;!-- Code snippet example --&gt;
 &lt;figure&gt;
-  &lt;code class="language-html block"&gt;Code inception&lt;/code&gt;
+  &lt;code class="language-html block"&gt;Infinite loop detected!&lt;/code&gt;
   &lt;figcaption class="uncounted"&gt;Example markup for the figure component.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Embedded video example --&gt;
+&lt;figure&gt;
+  &lt;iframe class="video" src="path/to/video.mpeg"&gt;&lt;/iframe&gt;
+  &lt;figcaption&gt;&amp;ldquo;Me at the Zoo&amp;rdquo; was...&lt;/figcaption&gt;
 &lt;/figure&gt;</code>
         </details>
         <ul class="notes">
@@ -794,7 +828,7 @@
             automatically numbered using CSS (the markup for the example above
             is <code>&lt;figcaption&gt;Adorable kitteh.&lt;/figure&gt;</code>,
             not <code>&lt;figcaption&gt;&lt;strong&gt;Figure 1.&lt;/strong&gt;
-            Adorable kitteh.&lt;/figure&gt;</code>). You can exempt a figure
+              Adorable kitteh.&lt;/figure&gt;</code>). You can exempt a figure
             from this automatic numbering by adding the .uncounted class to the
             <code>&lt;figcaption&gt;</code> tag.</li>
         </ul>
