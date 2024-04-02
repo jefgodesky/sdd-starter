@@ -5,6 +5,6 @@
   margin: spacing.$vertical 0;
   max-height: spacing.$code-block-max-height;
   overflow: auto;
-  padding: calc(spacing.$vertical / 2) calc(spacing.$horizontal / 2);
+  padding: calc(#{spacing.$vertical} / 2) calc(#{spacing.$horizontal} / 2);
   white-space: pre;
 }
