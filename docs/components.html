@@ -726,6 +726,15 @@
           <code class="language-html block">&lt;img src="path/to/image.jpg" alt="Alt text" /&gt;</code>
         </details>
         <ul class="notes">
+          <li>Consider if what you want to use might be a
+            <a href="#component-figure">figure</a>, rather than an
+            unaccompanied image. While every image <em>must</em> include
+            appropriate alternative text to make it accessible (see below),
+            <em>most</em> images would likely benefit from a caption, which
+            the figure component provides. It&rsquo;s not <em>impossible</em>
+            for an unaccompanied image to be the right choice, but it&rsquo;s
+            rare, so consider carefully if a figure could be a better
+            choice.</li>
           <li>Images must <em><strong>always</strong></em> include appropriate
             alternative text in the <code>alt</code> attribute. This text is
             read aloud to users using screen readers, so it should give a
@@ -742,6 +751,52 @@
             you&rsquo;re having a hard time describing that purpose for the
             image&rsquo;s alternative text, that can be your first sign that
             the image doesn&rsquo;t have one.</li>
+        </ul>
+      </section>
+      <section id="component-figure" class="component" data-component-category="Media">
+        <h2>Figure</h2>
+        <div class="example">
+          <figure>
+            <img src="/images/cat.jpg" alt="Kitteh" />
+            <figcaption>Adorable kitteh.</figcaption>
+          </figure>
+          <figure>
+            <code class="language-html block">&lt;figure&gt;
+  &lt;img src="/images/cat.jpg" alt="Kitteh" /&gt;
+  &lt;figcaption&gt;Adorable kitteh.&lt;/figcaption&gt;
+&lt;/figure&gt;</code>
+            <figcaption class="uncounted">Example markup for the figure component.</figcaption>
+          </figure>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;figure&gt;
+  &lt;img src="/images/cat.jpg" alt="Kitteh" /&gt;
+  &lt;figcaption&gt;Adorable kitteh.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;code class="language-html block"&gt;Code inception&lt;/code&gt;
+  &lt;figcaption class="uncounted"&gt;Example markup for the figure component.&lt;/figcaption&gt;
+&lt;/figure&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Most of the time, you should prefer a figure component over an
+            unaccompanied <a href="#component-img">image</a>, as the figure
+            allows you to attach a caption.</li>
+          <li>Besides images, figures can also be used to present snippets of
+            code (as in the second example). The design system includes
+            <a href="https://prismjs.com/">Prism</a>, so if you mark a code
+            snippet with a <code>language-*</code> class (e.g., the
+            <code>language-html</code> class used in the example HTML code
+            above), Prism will add syntax highlighting.</li>
+          <li>By default, <code>&lt;figcaption&gt;</code> tags are
+            automatically numbered using CSS (the markup for the example above
+            is <code>&lt;figcaption&gt;Adorable kitteh.&lt;/figure&gt;</code>,
+            not <code>&lt;figcaption&gt;&lt;strong&gt;Figure 1.&lt;/strong&gt;
+            Adorable kitteh.&lt;/figure&gt;</code>). You can exempt a figure
+            from this automatic numbering by adding the .uncounted class to the
+            <code>&lt;figcaption&gt;</code> tag.</li>
         </ul>
       </section>
     </main>

@@ -1,0 +1,26 @@
+@use "../modules/spacing";
+@use "../modules/typography";
+
+body {
+  counter-reset: figures;
+}
+
+figcaption {
+  font: typography.$fine;
+  margin: spacing.$text-s spacing.$none spacing.$none spacing.$none;
+
+  &:not(.uncounted):before {
+    counter-increment: figures;
+    content: 'Figure ' counter(figures) '. ';
+    font-weight: bold;
+  }
+}
+
+figure {
+  margin: spacing.$vertical spacing.$none;
+
+  img,
+  code[class*=language-].block {
+    margin: spacing.$none;
+  }
+}
