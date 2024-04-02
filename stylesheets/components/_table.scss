@@ -10,6 +10,10 @@ table {
   border-collapse: collapse;
   margin: spacing.$text-m calc(#{spacing.$text-xs} * -1);
   width: calc(100% + (#{spacing.$text-xs} * 2));
+
+  &:has(code[class*=language-].block) {
+    table-layout: fixed;
+  }
 }
 
 tcaption {
@@ -36,6 +40,16 @@ td {
   &.num,
   &.short {
     text-align: center;
+  }
+
+  &:has(code[class*=language-].block) {
+    padding: spacing.$none;
+  }
+
+  code[class*=language-].block {
+    border-radius: 0;
+    margin: spacing.$none;
+    padding: spacing.$text-xs;
   }
 }
 
