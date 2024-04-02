@@ -716,6 +716,34 @@
             variable definitions.</li>
         </ul>
       </section>
+      <section id="component-img" class="component" data-component-category="Media">
+        <h2>Image</h2>
+        <div class="example">
+          <img src="/images/cat.jpg" alt="Kitteh" />
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;img src="path/to/image.jpg" alt="Alt text" /&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Images must <em><strong>always</strong></em> include appropriate
+            alternative text in the <code>alt</code> attribute. This text is
+            read aloud to users using screen readers, so it should give a
+            useful, succinct description of the image and the purpose that it
+            plays on the page. You don&rsquo;t need to specify that it is
+            &ldquo;an image of&rdquo; or &ldquo;a photo of&rdquo;; that is
+            understood from the context of being alternative text.</li>
+          <li>If you&rsquo;re having a difficult time coming up with
+            alternative text for an image, consider the possibility that the
+            image might be purely decorative. This is usually a sign that you
+            should not use the image. We might need to update one or more
+            components in the design system to meet an aesthetic need, but
+            images in content should be used because they serve a purpose. If
+            you&rsquo;re having a hard time describing that purpose for the
+            image&rsquo;s alternative text, that can be your first sign that
+            the image doesn&rsquo;t have one.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/bundle.js"></script>
   </body>

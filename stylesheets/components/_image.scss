@@ -1,0 +1,6 @@
+@use "../modules/spacing";
+
+img {
+  margin: spacing.$vertical spacing.$none;
+  width: 100%;
+}
