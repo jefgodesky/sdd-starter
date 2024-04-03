@@ -1,0 +1,38 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+table.card {
+  thead {
+    display: none;
+  }
+
+  tr {
+    @include mixins.set-style("background", "off-bg");
+    display: block;
+    margin: spacing.$none;
+    padding: spacing.$text-xs
+  }
+
+  tr + tr {
+    margin-top: spacing.$text-xs;
+  }
+
+  td {
+    display: block;
+    padding: spacing.$text-xs spacing.$none;
+    text-align: left;
+
+    &:before {
+      content: attr(data-label);
+      display: block;
+      font: typography.$fine;
+    }
+  }
+
+  tfoot {
+    display: block;
+    margin: spacing.$text-xs spacing.$none spacing.$none spacing.$none;
+    padding: spacing.$text-xs spacing.$none spacing.$none spacing.$none;
+  }
+}

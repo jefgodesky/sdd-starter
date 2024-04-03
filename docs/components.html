@@ -650,6 +650,103 @@
             tag.</li>
         </ul>
       </section>
+      <section id="component-card-table" class="component" data-component-category="Content">
+        <h2>Card Table</h2>
+        <div class="example">
+          <table class="card">
+            <tcaption>A limerick</tcaption>
+            <tbody>
+              <tr>
+                <td data-label="Line Number">1</td>
+                <td data-label="Line">There was an Old Man with a beard,</td>
+                <td data-label="Syllables">Eight</td>
+              </tr>
+              <tr>
+                <td data-label="Line Number">2</td>
+                <td data-label="Line">Who said, &lsquo;It is just as I feared!</td>
+                <td data-label="Syllables">Eight</td>
+              </tr>
+              <tr>
+                <td data-label="Line Number">3</td>
+                <td data-label="Line">Two Owls and a Hen,</td>
+                <td data-label="Syllables">Five</td>
+              </tr>
+              <tr>
+                <td data-label="Line Number">4</td>
+                <td data-label="Line">Four Larks and a Wren,</td>
+                <td data-label="Syllables">Five</td>
+              </tr>
+              <tr>
+                <td data-label="Line Number">5</td>
+                <td data-label="Line">Have all built their nests in my beard!&rsquo;</td>
+                <td data-label="Syllables">Eight</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td data-label="Line Number">5</td>
+                <td />
+                <td data-label="Syllables">Thirty-four</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;table class="card"&gt;
+  &lt;tcaption&gt;A limerick&lt;/tcaption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-label="Line Number"&gt;1&lt;/td&gt;
+      &lt;td data-label="Line"&gt;There was an Old Man with a beard,&lt;/td&gt;
+      &lt;td data-label="Syllables"&gt;Eight&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label="Line Number"&gt;2&lt;/td&gt;
+      &lt;td data-label="Line"&gt;Who said, &amp;lsquo;It is just as I feared!&lt;/td&gt;
+      &lt;td data-label="Syllables"&gt;Eight&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label="Line Number"&gt;3&lt;/td&gt;
+      &lt;td data-label="Line"&gt;Two Owls and a Hen,&lt;/td&gt;
+      &lt;td data-label="Syllables"&gt;Five&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label="Line Number"&gt;4&lt;/td&gt;
+      &lt;td data-label="Line"&gt;Four Larks and a Wren,&lt;/td&gt;
+      &lt;td data-label="Syllables"&gt;Five&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-label="Line Number"&gt;5&lt;/td&gt;
+      &lt;td data-label="Line"&gt;Have all built their nests in my beard!&amp;rsquo;&lt;/td&gt;
+      &lt;td data-label="Syllables"&gt;Eight&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td data-label="Line Number"&gt;5&lt;/td&gt;
+      &lt;td /&gt;
+      &lt;td data-label="Syllables"&gt;Thirty-four&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>When the screen is too small (and client-side enhancements have
+            loaded correctly), <a href="#component-table">tables</a> respond by
+            turning into card tables. You can also make this the primary way
+            that you present tabular data by adding the <code>card</code> class
+            to the <code>&lt;table&gt;</code> tag.</li>
+          <li>When used by regular tables to respond to smaller screens, the
+            headings from the <code>&lt;thead&gt;</code> are used to populate
+            each cell&rsquo;s <code>data-label</code> attribute. When using the
+            card table as a component in itself and not as a responsive
+            enhancement to the base table, you can skip the
+            <code>&lt;thead&gt;</code> element, but you will need to add
+            <code>data-label</code> attributes to each cell (as shown in the
+            example code).</li>
+        </ul>
+      </section>
       <section id="component-dl" class="component" data-component-category="Content">
         <h2>Definition List</h2>
         <div class="example">
