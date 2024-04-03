@@ -1,0 +1,10 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+
+hr {
+  @include mixins.set-style("border-bottom", "borders.hairline");
+  border-top: spacing.$none;
+  border-right: spacing.$none;
+  border-left: spacing.$none;
+  border-style: solid;
+}
