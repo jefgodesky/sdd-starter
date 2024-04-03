@@ -38,6 +38,7 @@
     "tokens:dev": "chokidar tokens.json -c \"npm run tokens\""
   },
   "dependencies": {
+    "debounce": "^2.0.0",
     "prismjs": "^1.29.0"
   },
   "devDependencies": {
