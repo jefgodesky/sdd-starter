@@ -16,10 +16,11 @@ table {
   }
 }
 
-tcaption {
-  display: block;
+caption {
+  caption-side: top;
   font-weight: bold;
   margin: spacing.$text-m spacing.$none spacing.$none spacing.$none;
+  text-align: left;
 
   &:not(.uncounted):before {
     counter-increment: tables;

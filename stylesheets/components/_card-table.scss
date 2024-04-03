@@ -3,6 +3,10 @@
 @use "../modules/typography";
 
 table.card {
+  caption {
+    margin: spacing.$text-xs spacing.$none;
+  }
+
   thead {
     display: none;
   }
