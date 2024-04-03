@@ -2,10 +2,6 @@
 @use "../modules/spacing";
 @use "../modules/typography";
 
-body {
-  counter-reset: tables;
-}
-
 table {
   border-collapse: collapse;
   margin: spacing.$text-m calc(#{spacing.$text-xs} * -1);
@@ -19,12 +15,15 @@ table {
 caption {
   caption-side: top;
   font-weight: bold;
-  margin: spacing.$text-m spacing.$none spacing.$none spacing.$none;
+  margin: spacing.$text-m spacing.$text-xs spacing.$none spacing.$text-xs;
   text-align: left;
 
-  &:not(.uncounted):before {
+  &:not(.uncounted) {
     counter-increment: tables;
-    content: 'Table ' counter(tables) '. ';
+
+    &:before {
+      content: 'Table ' counter(tables) '. ';
+    }
   }
 }
 

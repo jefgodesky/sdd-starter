@@ -38,6 +38,7 @@
 body {
   @include mixins.set-style("background-color", "bg");
   @include mixins.set-style("color", "fg");
+  counter-reset: tables figures;
 
   @media not (prefers-color-scheme: dark) {
     @include prism.default();

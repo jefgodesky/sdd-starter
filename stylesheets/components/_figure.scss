@@ -1,18 +1,17 @@
 @use "../modules/spacing";
 @use "../modules/typography";
 
-body {
-  counter-reset: figures;
-}
-
 figcaption {
   font: typography.$fine;
   margin: spacing.$text-s spacing.$none spacing.$none spacing.$none;
 
-  &:not(.uncounted):before {
+  &:not(.uncounted) {
     counter-increment: figures;
-    content: 'Figure ' counter(figures) '. ';
-    font-weight: bold;
+
+    &:before {
+      content: 'Figure ' counter(figures) '. ';
+      font-weight: bold;
+    }
   }
 }
 
