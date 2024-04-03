@@ -539,7 +539,7 @@
       <section id="component-table" class="component" data-component-category="Content">
         <h2>Table</h2>
         <div class="example">
-          <table>
+          <table style="--breakpoint: 50rem">
             <caption>A limerick</caption>
             <thead>
             <tr>
@@ -586,7 +586,7 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block language-html">&lt;table&gt;
+          <code class="block language-html">&lt;table style="--breakpoint: 50rem"&gt;
   &lt;caption&gt;A limerick&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -648,6 +648,14 @@
             You can exempt a table from this automatic numbering by adding the
             <code>.uncounted</code> class to the <code>&lt;caption&gt;</code>
             tag.</li>
+          <li>On more narrow screens, tables collapse into
+            <a href="#component-card-table">card tables</a>. The default
+            breakpoint for this is at {{ breakpoints.desktop }}, but you can
+            change this on a table-by-table basis by using the
+            <code>--breakpoint</code> style property, as in the example above.
+            The best breakpoint varies by table, according to its content and
+            the number of columns it contains, so you should set this to a
+            value that makes sense for the table that you&rsquo;re making.</li>
         </ul>
       </section>
       <section id="component-card-table" class="component" data-component-category="Content">

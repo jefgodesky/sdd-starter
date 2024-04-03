@@ -11,7 +11,8 @@ interface ModuleConfig {
 const modules: ModuleConfig[] = [
   { elems: selector('code.block'), name: 'code' },
   { elems: selector('#component-navigator'), name: 'component-navigator' },
-  { elems: selector('textarea[maxlength]'), name: 'character-count' }
+  { elems: selector('textarea[maxlength]'), name: 'character-count' },
+  { elems: selector('table:not(.card)'), name: 'responsive-table' }
 ]
 
 const loadModules = async (configs: ModuleConfig[]): Promise<void> => {
