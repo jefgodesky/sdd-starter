@@ -30,7 +30,8 @@ $themes: (
     "borders": (
       "hairline": borders.$light-hairline,
       "th": borders.$light-th,
-      "tfoot": borders.$light-tfoot
+      "tfoot": borders.$light-tfoot,
+      "blockquote": borders.$light-blockquote
     )
   ),
   "dark": (
@@ -61,7 +62,8 @@ $themes: (
     "borders": (
       "hairline": borders.$dark-hairline,
       "th": borders.$dark-th,
-      "tfoot": borders.$dark-tfoot
+      "tfoot": borders.$dark-tfoot,
+      "blockquote": borders.$dark-blockquote
     )
   )
 )

@@ -861,6 +861,42 @@
             variable definitions.</li>
         </ul>
       </section>
+      <section id="component-blockquote" class="component" data-component-category="Content">
+        <h2>Block Quote</h2>
+        <div class="example">
+          <blockquote>
+            <p>We should work toward a universal linked information system, in
+              which generality and portability are more important than fancy
+              graphics techniques and complex extra facilities. The aim would
+              be to allow a place to be found for any information or reference
+              which one felt was important, and a way of finding it afterwards.
+               The result should be sufficiently attractive to use that the
+              information contained would grow past a critical threshold, so
+              that the usefulness the scheme would in turn encouraged its
+              increased use. The passing of this threshold accelerated by
+              allowing large existing databases to be linked together and with
+              new ones.</p>
+            <footer>Tim Berners Lee</footer>
+          </blockquote>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;blockquote&gt;
+  &lt;p&gt;We should work...&lt;/p&gt;
+  &lt;footer&gt;Tim Berners Lee&lt;/footer&gt;
+&lt;/blockquote&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The block quote component is for quoting large sections of text
+            in a document. This is a block element which should include one
+            or more <code>&lt;p&gt;</code>, <code>&lt;ul&lt;</code>, or
+            <code>&lt;ol&gt;</code> tags.</li>
+          <li>A <code>&lt;footer&gt;</code> element can be included to provide
+            attribution for the quote. When used in a longer text, this may not
+            be necessary if you&rsquo;ve already provided attribution in the
+            text.</li>
+        </ul>
+      </section>
       <section id="component-img" class="component" data-component-category="Media">
         <h2>Image</h2>
         <div class="example">

@@ -1,0 +1,36 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+
+blockquote {
+  margin: spacing.$text-m spacing.$none;
+
+  p,
+  & > ul,
+  & > ol {
+    @include mixins.set-style("border-left", "borders.blockquote");
+    margin: 0;
+    padding: spacing.$none spacing.$none spacing.$none spacing.$text-s;
+  }
+
+  p + p {
+    padding-top: spacing.$text-s;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding: spacing.$text-xs 0 spacing.$none spacing.$text-xl;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  footer {
+    margin: spacing.$text-s spacing.$none spacing.$none calc(#{spacing.$text-xs} + #{spacing.$text-m});
+
+    &:before {
+      content: '— ';
+    }
+  }
+}
