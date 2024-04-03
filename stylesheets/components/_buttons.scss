@@ -1,10 +1,20 @@
 @use "../modules/mixins";
 @use "../modules/spacing";
 
-button {
-  @include mixins.set-style("background", "buttons.base.face");
+@mixin button-style($primary: true) {
+  $base: if($primary == true, "buttons.base.text", "buttons.base.face");
+  $hover: if($primary == true, "buttons.base.text", "buttons.hover.face");
+  $active: if($primary == true, "buttons.base.text", "buttons.active.face");
+
   @include mixins.set-style("border-color", "buttons.base.face");
-  @include mixins.set-style("color", "buttons.base.text");
+  @include mixins.set-style("color", $base);
+
+  @if $primary {
+    @include mixins.set-style("background", "buttons.base.face");
+  } @else {
+    background: transparent;
+  }
+
   appearance: none;
   border-style: solid;
   border-width: calc(#{spacing.$text-xs} / 2);
@@ -15,30 +25,23 @@ button {
   padding: spacing.$text-xs spacing.$text-l;
 
   &:hover {
-    @include mixins.set-style("background", "buttons.hover.face");
     @include mixins.set-style("border-color", "buttons.hover.face");
-    @include mixins.set-style("color", "buttons.hover.text");
+    @include mixins.set-style("color", $hover);
+
+    @if $primary {
+      @include mixins.set-style("background", "buttons.hover.face");
+    } @else {
+      background: transparent;
+    }
   }
 
   &:active {
-    @include mixins.set-style("background", "buttons.active.face");
     @include mixins.set-style("border-color", "buttons.active.face");
-    @include mixins.set-style("color", "buttons.active.text");
-  }
+    @include mixins.set-style("color", $active);
 
-  &.secondary {
-    @include mixins.set-style("color", "buttons.base.face");
-    background: transparent;
-
-    &:hover {
-      @include mixins.set-style("border-color", "buttons.hover.face");
-      @include mixins.set-style("color", "buttons.hover.face");
-      background: transparent;
-    }
-
-    &:active {
-      @include mixins.set-style("border-color", "buttons.active.face");
-      @include mixins.set-style("color", "buttons.active.face");
+    @if $primary {
+      @include mixins.set-style("background", "buttons.active.face");
+    } @else {
       background: transparent;
     }
   }
@@ -46,16 +49,24 @@ button {
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active {
-    @include mixins.set-style("background", "buttons.base.face", desaturate, desaturate, 100%);
     @include mixins.set-style("border-color", "buttons.base.face", desaturate, desaturate, 100%);
-    @include mixins.set-style("color", "buttons.base.text", desaturate, desaturate, 100%);
-    cursor: not-allowed;
-    opacity: 0.5;
+    @include mixins.set-style("color", $base, desaturate, desaturate, 100%);
 
-    &.secondary {
-      @include mixins.set-style("border-color", "buttons.base.face", desaturate, desaturate, 100%);
-      @include mixins.set-style("color", "buttons.base.face", desaturate, desaturate, 100%);
+    @if $primary {
+      @include mixins.set-style("background", "buttons.base.face", desaturate, desaturate, 100%);
+    } @else {
       background: transparent;
     }
+
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+button {
+  @include button-style();
+
+  &.secondary {
+    @include button-style(false);
   }
 }

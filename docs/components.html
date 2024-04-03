@@ -148,6 +148,31 @@
             component instead.</li>
         </ul>
       </section>
+      <section id="component-button-set" class="component" data-component-category="Forms">
+        <h2>Button Set</h2>
+        <div class="example">
+          <menu class="button-set">
+            <li class="primary"><button>Primary Button</button></li>
+            <li><button>Secondary Button</button></li>
+          </menu>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="block language-html">&lt;menu class="button-set"&gt;
+  &lt;li class="primary"&gt;&lt;button&gt;Primary Button&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button&gt;Secondary Button&lt;/button&gt;&lt;/li&gt;
+&lt;/menu&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>A button set presents two or more
+            <a href="#component-button">buttons</a> as a set, usually to
+            present the user with a choice (the most common example would be
+            the choice to <strong>Submit</strong> or <strong>Cancel</strong>).</li>
+          <li>Only one button in a set should be primary. Mark its
+            <code>&lt;li&gt;</code> tag with the <code>primary</code> class, as
+            in the example above.</li>
+        </ul>
+      </section>
       <section id="component-text-input" class="component" data-component-category="Forms">
         <h2>Text Input</h2>
         <div class="example">

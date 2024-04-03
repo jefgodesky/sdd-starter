@@ -1,0 +1,27 @@
+@use "../modules/placeholders";
+@use "../modules/spacing";
+@use "./buttons";
+
+.button-set {
+  @extend %unstyled-list;
+  margin: spacing.$text-m spacing.$none;
+  text-align: left;
+
+  li {
+    display: inline-block;
+  }
+
+  li + li {
+    margin-left: spacing.$text-xs;
+  }
+
+  button {
+    @include buttons.button-style(false);
+    margin: spacing.$none;
+  }
+
+  .primary button {
+    @include buttons.button-style(true);
+    margin: spacing.$none;
+  }
+}
