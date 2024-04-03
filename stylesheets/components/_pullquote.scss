@@ -1,0 +1,8 @@
+@use "../modules/spacing";
+@use "../modules/typography";
+
+aside.pull {
+  font: typography.$pullquote;
+  margin: spacing.$text-m spacing.$none;
+  text-align: center;
+}
