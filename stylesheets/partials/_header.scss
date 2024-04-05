@@ -1,5 +1,33 @@
+@use "../modules/breakpoints";
+@use "../modules/mixins";
 @use "../modules/placeholders";
+@use "../modules/spacing";
 
 header {
   @extend %layout;
+}
+
+main header {
+  padding: spacing.$none spacing.$none spacing.$vertical;
+}
+
+header.topbar {
+  @include mixins.set-style("background", "off-bg");
+  $width: calc(#{breakpoints.$desktop} - (#{spacing.$horizontal} * 2));
+  margin-top: 0;
+  max-width: none;
+  overflow: auto;
+  padding: calc(#{spacing.$vertical} / 2) calc(((100vw - var(--scrollbar-width, 17px) - $width) / 2) + #{spacing.$horizontal});
+  text-align: right;
+
+  .home {
+    @include mixins.set-style("color", "fg");
+    float: left;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      @include mixins.set-style("color", "links.hover");
+    }
+  }
 }
