@@ -9,6 +9,7 @@ export default {
     '\\.[jt]sx?$': [
       'ts-jest',
       {
+        isolatedModules: true,
         useESM: true
       }
     ]
