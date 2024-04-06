@@ -44,6 +44,8 @@
             </ul>
           </li>
           <li><a href="#spacing">Spacing</a></li>
+          <li><a href="#borders">Borders</a></li>
+          <li><a href="#transitions">Transitions</a></li>
         </ul>
       </nav>
       <section id="colors">
@@ -168,6 +170,64 @@
               <td>{{ value }}</td>
             </tr>
             {{ endfor }}
+          </tbody>
+        </table>
+      </section>
+      <section id="borders">
+        <h2>Borders</h2>
+        <p>If you&rsquo;d like to use the SCSS variables provided for these
+          tokens, you&rsquo;ll need to import the <code>_borders.scss</code>
+          module (found at <code>stylesheets/modules/_borders.scss</code>
+          in our code repository after the tokens have been generated) with a
+          line like the following at the top of your SCSS stylesheet:</p>
+        <code class="block language-css">@use "/path/to/repo/stylesheets/src/modules/_borders.scss";</code>
+        <table>
+          <thead>
+          <tr>
+            <th>Description</th>
+            <th>SCSS Variable</th>
+            <th>Preview</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{ for borders.* }}
+          <tr>
+            <td>{{ description }}</td>
+            <td><code>{{ scss }}</code></td>
+            <td><div class="preview" style="border-top: {{ css }}"></div></td>
+          </tr>
+          {{ endfor }}
+          </tbody>
+        </table>
+      </section>
+      <section id="transitions">
+        <h2>Transitions</h2>
+        <p>If you&rsquo;d like to use the SCSS variables provided for these
+          tokens, you&rsquo;ll need to import the <code>_transitions.scss</code>
+          module (found at <code>stylesheets/modules/_transitions.scss</code>
+          in our code repository after the tokens have been generated) with a
+          line like the following at the top of your SCSS stylesheet:</p>
+        <code class="block language-css">@use "/path/to/repo/stylesheets/src/modules/_transitions.scss";</code>
+        <table>
+          <thead>
+          <tr>
+            <th>Description</th>
+            <th>SCSS Variable</th>
+            <th>Duration</th>
+            <th>Delay</th>
+            <th>Timing Function</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{ for transitions.* }}
+          <tr>
+            <td>{{ description }}</td>
+            <td><code>{{ scss }}</code></td>
+            <td>{{ duration }}</td>
+            <td>{{ delay }}</td>
+            <td><a href="{{ timing.url }}">{{ timing }}</a></td>
+          </tr>
+          {{ endfor }}
           </tbody>
         </table>
       </section>
