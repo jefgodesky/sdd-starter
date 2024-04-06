@@ -52,11 +52,11 @@
     #{$property}: $dark;
   }
 
-  .light & {
+  [data-theme="light"] & {
     #{$property}: $light;
   }
 
-  .dark & {
+  [data-theme="dark"] & {
     #{$property}: $dark;
   }
 }

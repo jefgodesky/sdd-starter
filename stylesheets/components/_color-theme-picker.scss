@@ -1,0 +1,99 @@
+@use "../modules/mixins";
+@use "../modules/spacing";
+@use "../modules/transitions";
+
+.color-theme-picker {
+  @include mixins.set-style("color", "fg");
+  cursor: pointer;
+  display: inline-block;
+  height: spacing.$text-l;
+  width: spacing.$text-l;
+
+  svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  svg :is(.moon, .sun, .sunbeams) {
+    transform-origin: center;
+  }
+
+  svg :is(.moon, .sun) {
+    @include mixins.set-style("fill", "fg");
+  }
+
+  &:is(:hover, :focus-visible) :is(.sun, .moon) {
+    @include mixins.set-style("fill", "links.hover");
+  }
+
+  .sunbeams {
+    @include mixins.set-style("stroke", "fg");
+    stroke-width: 2px;
+  }
+
+  &:is(:hover, :focus-visible) {
+    :is(.sun, .moon) {
+      @include mixins.set-style("fill", "links.hover");
+    }
+
+    .sunbeams {
+      @include mixins.set-style("stroke", "links.hover");
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sun {
+      transition: transform transitions.$e1;
+    }
+
+    .sunbeams {
+      transition: transform transitions.$e2,
+        opacity transitions.$e1;
+    }
+
+    .moon circle {
+      transition: transform transitions.$e3;
+
+      @supports (cx: 1) {
+        transition: cx transitions.$e3;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] .color-theme-picker {
+  .sun {
+    transform: scale(1.75);
+  }
+
+  .sunbeams {
+    opacity: 0;
+  }
+
+  .moon circle {
+    transform: translateX(-7px);
+
+    @supports (cx: 1) {
+      cx: 17;
+      transform: translateX(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sun {
+      transform: scale(1.75);
+      transition: transform transitions.$e3;
+    }
+
+    .sunbeams {
+      transform: rotateZ(-25deg);
+      transition-duration: 150ms;
+    }
+
+    .moon circle {
+      transition-duration: 500ms;
+      transition-delay: 250ms;
+    }
+  }
+}
