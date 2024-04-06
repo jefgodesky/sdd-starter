@@ -2,9 +2,6 @@
 @use "../modules/mixins";
 
 section.component {
-  margin: spacing.$none;
-  padding: spacing.$vertical spacing.$none;
-
   summary {
     @include mixins.set-style("background", "bg", darken, lighten, 15%);
     cursor: pointer;
