@@ -1,50 +1,21 @@
-import { create } from 'unobtrusive-dom'
-
-const renderToggle = (): HTMLElement => {
-  const svg = create({ tag: 'svg', attrs: { width: '24', height: '24', viewBox: '0 0 24 24' } })
-  const moonMaskId = 'color-theme-picker-moon-mask'
-  const moonMask = create({ tag: 'mask', classes: ['moon'], attrs: { id: moonMaskId } })
-  moonMask.appendChild(create({ tag: 'rect', attrs: { x: '0', y: '0', height: '100%', width: '100%' } }))
-  moonMask.appendChild(create({ tag: 'circle', attrs: { cx: '24', cy: '10', r: '6' } }))
-  svg.appendChild(moonMask)
-
-  svg.appendChild(create({
-    tag: 'circle',
-    classes: ['sun'],
-    attrs: {
-      cx: '12',
-      cy: '12',
-      r: '6',
-      mask: `url(#${moonMaskId})`,
-      fill: 'currentColor'
-    }
-  }))
-
-  const sunbeamCoords = [
-    [12, 1, 12, 3],
-    [12, 21, 12, 23],
-    [4.22, 4.22, 5.64, 5.64],
-    [18.36, 18.36, 19.78, 19.78],
-    [1, 12, 3, 12],
-    [21, 12, 23, 12],
-    [4.22, 19.78, 5.64, 18.36],
-    [18.36, 5.64, 19.78, 4.22]
-  ]
-  const sunbeamsGroup = create({ tag: 'g', classes: ['sunbeams'], attrs: { stroke: 'currentColor' } })
-  for (const c of sunbeamCoords) {
-    sunbeamsGroup.appendChild(create({
-      tag: 'line',
-      attrs: {
-        x1: c[0].toString(),
-        y1: c[1].toString(),
-        x2: c[2].toString(),
-        y2: c[3].toString()
-      }
-    }))
-  }
-  svg.appendChild(sunbeamsGroup)
-
-  return svg
+const renderToggle = (root: HTMLElement): void => {
+  root.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24">
+  <mask class="moon" id="color-theme-picker-moon-mask">
+    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+    <circle cx="24" cy="10" r="6" fill="black" />
+  </mask>
+  <circle class="sun" cx="12" cy="12" r="6" mask="url(#color-theme-picker-moon-mask)" fill="currentColor" />
+  <g class="sunbeams" stroke="currentColor">
+    <line x1="12" y1="1" x2="12" y2="3" />
+    <line x1="12" y1="21" x2="12" y2="23" />
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+    <line x1="1" y1="12" x2="3" y2="12" />
+    <line x1="21" y1="12" x2="23" y2="12" />
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+   </g>
+</svg>`
 }
 
 export default renderToggle
