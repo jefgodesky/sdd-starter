@@ -12,7 +12,8 @@ const modules: ModuleConfig[] = [
   { elems: selector('code.block'), name: 'code' },
   { elems: selector('#component-navigator'), name: 'component-navigator' },
   { elems: selector('textarea[maxlength]'), name: 'character-count' },
-  { elems: selector('table:not(.card)'), name: 'responsive-table' }
+  { elems: selector('table:not(.card)'), name: 'responsive-table' },
+  { elems: selector('.color-theme-picker'), name: 'color-theme-picker' }
 ]
 
 const loadModules = async (configs: ModuleConfig[]): Promise<void> => {
