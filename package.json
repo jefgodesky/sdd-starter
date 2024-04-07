@@ -27,7 +27,7 @@
     "dist:mkdir": "mkdir -p dist/stylesheets",
     "server:dev": "browser-sync start --server dist --files dist",
     "components:build": "tsc --project components/tsconfig.json",
-    "docs:dev": "chokidar ./docs/*.html -c \"npm run tokens\"",
+    "docs:dev": "chokidar ./docs/*.html ./docs/**/*.html -c \"npm run tokens\"",
     "js:dev": "webpack --watch --mode development",
     "sass:dev": "sass --watch --update --style=expanded stylesheets:dist/stylesheets",
     "img:dev": "cp -R images dist",
