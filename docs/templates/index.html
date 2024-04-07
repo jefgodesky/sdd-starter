@@ -7,6 +7,10 @@
     <link rel="stylesheet" media="all" href="../stylesheets/index.css" />
   </head>
   <body>
+    <header class="topbar">
+      <a class="home" href="../index.html">SDD/DS</a>
+      <div class="color-theme-picker"></div>
+    </header>
     <nav class="breadcrumbs">
       <ul>
         <li><a href="../index.html">An SDD Design System</a></li>
@@ -14,10 +18,12 @@
       </ul>
     </nav>
     <main>
-      <h1>Templates</h1>
-      <section id="template-basic">
+      <header>
+        <h1>Templates</h1>
+      </header>
+      <section id="template-basic" class="component">
         <h2>Basic Template</h2>
-        <div class="centered-text">
+        <div class="example centered">
           <a href="basic.html">Link</a>
         </div>
         <details>
@@ -31,8 +37,20 @@
     &lt;link rel="stylesheet" media="all" href="https://design.example.com/{{ version path }}/index.css" /&gt;
   &lt;/head&gt;
   &lt;body&gt;
+    &lt;header class="topbar"&gt;
+      &lt;a class="home" href="index.html"&gt;SDD/DS&lt;/a&gt;
+      &lt;div class="color-theme-picker"&gt;&lt;/div&gt;
+    &lt;/header&gt;
+    &lt;nav class="breadcrumbs"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="current"&gt;Current Page&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
     &lt;main&gt;
-      &lt;h1&gt;Title&lt;/h1&gt;
+      &lt;header&gt;
+        &lt;h1&gt;Basic Template&lt;/h1&gt;
+      &lt;/header&gt;
       &lt;!-- Content goes here --&gt;
     &lt;/main&gt;
     &lt;script src="https://design.example.com/{{ version path }}/bundle.js"&gt;&lt;/script&gt;
