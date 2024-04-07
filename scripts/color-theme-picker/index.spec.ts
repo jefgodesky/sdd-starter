@@ -1,7 +1,7 @@
 import initColorThemePicker from './index'
 
 describe('initColorThemePicker', () => {
-  let root: HTMLElement | undefined
+  let root: HTMLElement | null
   const mockMatchMedia = (matches: boolean = false): void => {
     Object.defineProperty(window, 'matchMedia', {
       writable: true,
