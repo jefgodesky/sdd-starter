@@ -55,7 +55,7 @@ So, what will your design system be?
 `)
   const response: Answers<string> = await prompts(questions)
 
-  const strings = {
+  const strings: { [key: string]: { old: RegExp, new: string } } = {
     title: {
       old: /<title>An SDD Design System<\/title>/gi,
       new: `<title>${response.full as string}</title>`
