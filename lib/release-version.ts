@@ -27,4 +27,7 @@ const releaseVersion = (filesystem: typeof fs = fs): void => {
   }
 }
 
+const thisFile = process.cwd() + '/lib/release-version.ts'
+if (process.argv[1] === thisFile) releaseVersion()
+
 export default releaseVersion
