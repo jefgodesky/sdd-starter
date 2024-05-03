@@ -1,7 +1,5 @@
 @use "partials/reset";
 
-@use "vendor/prism.scss";
-
 @use "partials/main";
 @use "partials/header";
 @use "partials/lists";
@@ -45,10 +43,10 @@ body {
   counter-reset: tables figures;
 
   @media not (prefers-color-scheme: dark) {
-    @include prism.default();
+    @import "../node_modules/highlight.js/styles/default";
   }
 
   @media (prefers-color-scheme: dark) {
-    @include prism.dark();
+    @import "../node_modules/highlight.js/styles/dark";
   }
 }
