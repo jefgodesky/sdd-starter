@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <title>An SDD Design System: Components</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" media="all" href="./stylesheets/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="./stylesheets/index.css">
   </head>
   <body>
     <header class="topbar">
@@ -29,7 +27,7 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;a href="#"&gt;Link&lt;/a&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Links <em>go places</em>, while <a href="#component-button">buttons</a>
@@ -37,14 +35,14 @@
             of the website. That can be on the server side or the client side,
             but a button implies that some action is being taken, and something,
             somewhere is different now. Links take you somewhere else, but
-            neither the place you were nor the place you&rsquo;re going have
+            neither the place you were nor the place you’re going have
             changed when you do so.</li>
           <li>Yes, buttons are routinely abused to work as just bigger, more
-            prominent links &mdash; usually along with other bad design
+            prominent links — usually along with other bad design
             decisions that visually mark almost all of the items on a page as
             the most important thing, creating frustration and increasing the
-            user&rsquo;s cognitive load. It&rsquo;s a terrible practice, and
-            just because it&rsquo;s common is no reason to do it.</li>
+            user’s cognitive load. It’s a terrible practice, and
+            just because it’s common is no reason to do it.</li>
           <li>In places where you might be tempted to use a button to go
             somewhere because the link should be visually prominent, consider
             using the <a href="#component-cta">prominent link</a>
@@ -63,7 +61,7 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;a href="#" class="cta"&gt;Call to Action&lt;/a&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"cta"</span>&gt;</span>Call to Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Use this component when you want to give users the opportunity to
@@ -101,12 +99,12 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;nav class="breadcrumbs"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="index.html"&gt;An SDD Design System&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="current"&gt;Components&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumbs"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"index.html"</span>&gt;</span>An SDD Design System<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"current"</span>&gt;</span>Components<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Only one set of breadcrumbs should appear on a page. Place it
@@ -124,15 +122,15 @@
         <div class="example centered">
           <button>Primary Button</button>
           <button class="secondary">Secondary Button</button>
-          <button disabled>Disabled Primary Button</button>
-          <button class="secondary" disabled>Disabled Secondary Button</button>
+          <button disabled="">Disabled Primary Button</button>
+          <button class="secondary" disabled="">Disabled Secondary Button</button>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;button&gt;Primary Button&lt;/button&gt;
-&lt;button class="secondary"&gt;Second Button&lt;/button&gt;
-&lt;button disabled&gt;Disabled Primary Button&lt;/button&gt;
-&lt;button class="secondary" disabled&gt;Disabled Secondary Button&lt;/button&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Primary Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"secondary"</span>&gt;</span>Second Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled Primary Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"secondary"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled Secondary Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Buttons <em>do things</em>, while <a href="#component-link">links</a>
@@ -143,11 +141,11 @@
             neither the place you were nor the place you’re going have
             changed when you do so.</li>
           <li>Yes, buttons are routinely abused to work as just bigger, more
-            prominent links &mdash; usually along with other bad design
+            prominent links — usually along with other bad design
             decisions that visually mark almost all the items on a page as
             the most important thing, creating frustration and increasing the
-            user&rsquo;s cognitive load. It&rsquo;s a terrible practice, and
-            just because it&rsquo;s common is no reason to do it.</li>
+            user’s cognitive load. It’s a terrible practice, and
+            just because it’s common is no reason to do it.</li>
           <li>In places where you might be tempted to use a button to go
             somewhere because the link should be visually prominent, consider
             using the <a href="#component-cta">call to action</a>
@@ -164,10 +162,10 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;menu class="button-set"&gt;
-  &lt;li class="primary"&gt;&lt;button&gt;Primary Button&lt;/button&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;button&gt;Secondary Button&lt;/button&gt;&lt;/li&gt;
-&lt;/menu&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">menu</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button-set"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"primary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Primary Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Secondary Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">menu</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>A button set presents two or more
@@ -192,13 +190,13 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;input type="text" placeholder="Text input"&gt;
-&lt;input type="email" placeholder="you@example.com"&gt;
-&lt;input type="search" placeholder="Your search terms..."&gt;
-&lt;input type="tel" placeholder="1 (212) 867-5309"&gt;
-&lt;input type="url" placeholder="https://example.com"&gt;
-&lt;input type="number" value="0" min="0" max="10"&gt;
-&lt;input type="text" placeholder="Text input" value="Error!" class="error"&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Text input"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"you@example.com"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Your search terms..."</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"1 (212) 867-5309"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"https://example.com"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"10"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Text input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Error!"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error"</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Do <strong>not</strong> use placeholders in place of
@@ -258,18 +256,18 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;label for="component-label-x1"&gt;Label&lt;/label&gt;
-&lt;input type="text" id="component-label-x1"&gt;
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"component-label-x1"</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"component-label-x1"</span>&gt;</span>
 
-&lt;label for="component-label-x2"&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"component-label-x2"</span>&gt;</span>
   Label
-  &lt;span class="note"&gt;This label has a note.&lt;/span&gt;
-&lt;/label&gt;
-&lt;input type="text" id="component-label-x2"&gt;
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note"</span>&gt;</span>This label has a note.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"component-label-x2"</span>&gt;</span>
 
-&lt;label for="component-label-x3" class="error"&gt;Label in Error State&lt;/label&gt;
-&lt;input type="text" class="error" id="component-label-x3"&gt;
-&lt;p class="error msg"&gt;This is an example of a text input in an error state, with a label and an error message.&lt;/p&gt;</code>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"component-label-x3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error"</span>&gt;</span>Label in Error State<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"component-label-x3"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error msg"</span>&gt;</span>This is an example of a text input in an error state, with a label and an error message.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Though rare exceptions might exist, it’s a good starting
@@ -300,10 +298,10 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;textarea class="sm"&gt;This is a small text area.&lt;/textarea&gt;
-&lt;textarea&gt;This is the standard text area.&lt;/textarea&gt;
-&lt;textarea class="lg"&gt;This is a large text area.&lt;/textarea&gt;
-&lt;textarea maxlength="256"&gt;This is a standard text area with a maximum length of 256 characters.&lt;/textarea&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sm"</span>&gt;</span>This is a small text area.<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">textarea</span>&gt;</span>This is the standard text area.<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lg"</span>&gt;</span>This is a large text area.<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"256"</span>&gt;</span>This is a standard text area with a maximum length of 256 characters.<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>The text area input is appropriate when you’re asking a
@@ -332,10 +330,10 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;fieldset class="input-button"&gt;
-  &lt;input type="search" placeholder="Search"&gt;
-  &lt;button&gt;Search&lt;/button&gt;
-&lt;/fieldset&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-button"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>This component allows you to create a form that combines a single
@@ -362,18 +360,18 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;select&gt;
-  &lt;optgroup label="Primary Colors"&gt;
-    &lt;option value="red"&gt;Red&lt;/option&gt;
-    &lt;option value="blue"&gt;Blue&lt;/option&gt;
-    &lt;option value="green"&gt;Green&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Secondary Colors"&gt;
-    &lt;option value="orange"&gt;Orange&lt;/option&gt;
-    &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
-    &lt;option value="purple"&gt;Purple&lt;/option&gt;
-  &lt;/optgroup&gt;
-&lt;/select&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Primary Colors"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"red"</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"blue"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"green"</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Secondary Colors"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"orange"</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yellow"</span>&gt;</span>Yellow<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"purple"</span>&gt;</span>Purple<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Use a dropdown when you would like a user to choose a single
@@ -419,23 +417,23 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;label class="radio"&gt;
-  &lt;input type="radio" name="radio-example" value="yes" id="radio-example-yes"&gt;
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-example-yes"</span>&gt;</span>
   Yes
-&lt;/label&gt;
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="radio-example" value="no" id="radio-example-no"&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-example-no"</span>&gt;</span>
   No
-&lt;/label&gt;
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="radio-example" value="note" id="radio-example-note"&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"note"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-example-note"</span>&gt;</span>
   Well…
-  &lt;span class="note"&gt;This radio button’s label has a note.&lt;/span&gt;
-&lt;/label&gt;
-&lt;label class="radio extended"&gt;
-  &lt;input type="radio" name="radio-example" value="ext" id="radio-example-ext"&gt;
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note"</span>&gt;</span>This radio button’s label has a note.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio extended"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"ext"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-example-ext"</span>&gt;</span>
   You may find…
-&lt;/label&gt;</code>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Use radio buttons when you would like a user to choose a single
@@ -476,33 +474,33 @@
           </label>
           <label class="checkbox extended">
             <input type="checkbox" name="checkbox-example" value="extended" id="checkbox-example-extended">
-            Actually, I&rsquo;m a full-blown, full-stack developer/full-stack
+            Actually, I’m a full-blown, full-stack developer/full-stack
             designer/UX researcher/product manager/agility coach/DevOps
             engineer/ninja/rock star/barista/mime/eldritch horror unicorn.
           </label>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;label class="checkbox"&gt;
-  &lt;input type="checkbox" name="checkbox-example" value="designer" id="checkbox-example-designer"&gt;
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkbox-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"designer"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox-example-designer"</span>&gt;</span>
   Designer
-&lt;/label&gt;
-&lt;label class="checkbox"&gt;
-  &lt;input type="checkbox" name="checkbox-example" value="frontend-developer" id="checkbox-example-frontend-developer"&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkbox-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"frontend-developer"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox-example-frontend-developer"</span>&gt;</span>
   Frontend Developer
-&lt;/label&gt;
-&lt;label class="checkbox"&gt;
-  &lt;input type="checkbox" name="checkbox-example" value="backend-developer" id="checkbox-example-backend-developer"&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkbox-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"backend-developer"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox-example-backend-developer"</span>&gt;</span>
   Backend Developer
-&lt;/label&gt;
-&lt;label class="checkbox"&gt;
-  &lt;input type="checkbox" name="checkbox-example" value="fullstack-developer" id="checkbox-example-fullstack-developer"&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkbox-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"fullstack-developer"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox-example-fullstack-developer"</span>&gt;</span>
   Full Stack Developer
-&lt;/label&gt;
-&lt;label class="checkbox extended"&gt;
-  &lt;input type="checkbox" name="checkbox-example" value="extended" id="checkbox-example-extended"&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox extended"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkbox-example"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"extended"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox-example-extended"</span>&gt;</span>
   Actually...
-&lt;/label&gt;</code>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Use a set of checkboxes when you would like a user to choose one
@@ -521,11 +519,11 @@
       <section id="component-hr" class="component" data-component-category="Content">
         <h2>Horizontal Rule</h2>
         <div class="example">
-          <hr />
+          <hr>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;hr /&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span></code>
         </details>
         <ul class="notes">
           <li>A horizontal rule represents a thematic break in the content.
@@ -554,12 +552,12 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;nav class="toc"&gt;
-  &lt;h4&gt;Table of Contents&lt;/h4&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#section"&gt;Section Title&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"toc"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Table of Contents<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section"</span>&gt;</span>Section Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>A table of contents can be useful with reference pages (like the
@@ -587,7 +585,7 @@
             </tr>
             <tr>
               <td class="num">2</td>
-              <td>Who said, &lsquo;It is just as I feared!</td>
+              <td>Who said, ‘It is just as I feared!</td>
               <td class="short">Eight</td>
             </tr>
             <tr>
@@ -602,65 +600,65 @@
             </tr>
             <tr>
               <td class="num">5</td>
-              <td>Have all built their nests in my beard!&rsquo;</td>
+              <td>Have all built their nests in my beard!’</td>
               <td class="short">Eight</td>
             </tr>
             </tbody>
             <tfoot>
             <tr>
               <td class="num">5</td>
-              <td />
-              <td class="short">Thirty-four</td>
+              <td>
+              </td><td class="short">Thirty-four</td>
             </tr>
             </tfoot>
           </table>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;table style="--breakpoint: 50rem"&gt;
-  &lt;caption&gt;A limerick&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th class="num"&gt;#&lt;/th&gt;
-      &lt;th&gt;Line&lt;/th&gt;
-      &lt;th class="short"&gt;Syllables&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td class="num"&gt;1&lt;/td&gt;
-      &lt;td&gt;There was an Old Man with a beard,&lt;/td&gt;
-      &lt;td class="short"&gt;Eight&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class="num"&gt;2&lt;/td&gt;
-      &lt;td&gt;Who said, &amp;lsquo;It is just as I feared!&lt;/td&gt;
-      &lt;td class="short"&gt;Eight&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class="num"&gt;3&lt;/td&gt;
-      &lt;td&gt;Two Owls and a Hen,&lt;/td&gt;
-      &lt;td class="short"&gt;Five&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class="num"&gt;4&lt;/td&gt;
-      &lt;td&gt;Four Larks and a Wren,&lt;/td&gt;
-      &lt;td class="short"&gt;Five&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class="num"&gt;5&lt;/td&gt;
-      &lt;td&gt;Have all built their nests in my beard!&amp;rsquo;&lt;/td&gt;
-      &lt;td class="short"&gt;Eight&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td class="num"&gt;5&lt;/td&gt;
-      &lt;td /&gt;
-      &lt;td class="short"&gt;Thirty-four&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-&lt;/table&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"--breakpoint: 50rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>A limerick<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>#<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Line<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"short"</span>&gt;</span>Syllables<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>There was an Old Man with a beard,<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"short"</span>&gt;</span>Eight<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Who said, <span class="hljs-symbol">&amp;lsquo;</span>It is just as I feared!<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"short"</span>&gt;</span>Eight<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Two Owls and a Hen,<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"short"</span>&gt;</span>Five<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Four Larks and a Wren,<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"short"</span>&gt;</span>Five<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Have all built their nests in my beard!<span class="hljs-symbol">&amp;rsquo;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"short"</span>&gt;</span>Eight<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tfoot</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"short"</span>&gt;</span>Thirty-four<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tfoot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Tables should be used to present <em>tabular data</em>: that is,
@@ -686,7 +684,7 @@
             <code>--breakpoint</code> style property, as in the example above.
             The best breakpoint varies by table, according to its content and
             the number of columns it contains, so you should set this to a
-            value that makes sense for the table that you&rsquo;re making.</li>
+            value that makes sense for the table that you’re making.</li>
         </ul>
       </section>
       <section id="component-card-table" class="component" data-component-category="Content">
@@ -702,7 +700,7 @@
               </tr>
               <tr>
                 <td data-label="Line Number">2</td>
-                <td data-label="Line">Who said, &lsquo;It is just as I feared!</td>
+                <td data-label="Line">Who said, ‘It is just as I feared!</td>
                 <td data-label="Syllables">Eight</td>
               </tr>
               <tr>
@@ -717,58 +715,58 @@
               </tr>
               <tr>
                 <td data-label="Line Number">5</td>
-                <td data-label="Line">Have all built their nests in my beard!&rsquo;</td>
+                <td data-label="Line">Have all built their nests in my beard!’</td>
                 <td data-label="Syllables">Eight</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
                 <td data-label="Line Number">5</td>
-                <td />
-                <td data-label="Syllables">Thirty-four</td>
+                <td>
+                </td><td data-label="Syllables">Thirty-four</td>
               </tr>
             </tfoot>
           </table>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;table class="card"&gt;
-  &lt;caption&gt;A limerick&lt;/caption&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td data-label="Line Number"&gt;1&lt;/td&gt;
-      &lt;td data-label="Line"&gt;There was an Old Man with a beard,&lt;/td&gt;
-      &lt;td data-label="Syllables"&gt;Eight&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td data-label="Line Number"&gt;2&lt;/td&gt;
-      &lt;td data-label="Line"&gt;Who said, &amp;lsquo;It is just as I feared!&lt;/td&gt;
-      &lt;td data-label="Syllables"&gt;Eight&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td data-label="Line Number"&gt;3&lt;/td&gt;
-      &lt;td data-label="Line"&gt;Two Owls and a Hen,&lt;/td&gt;
-      &lt;td data-label="Syllables"&gt;Five&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td data-label="Line Number"&gt;4&lt;/td&gt;
-      &lt;td data-label="Line"&gt;Four Larks and a Wren,&lt;/td&gt;
-      &lt;td data-label="Syllables"&gt;Five&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td data-label="Line Number"&gt;5&lt;/td&gt;
-      &lt;td data-label="Line"&gt;Have all built their nests in my beard!&amp;rsquo;&lt;/td&gt;
-      &lt;td data-label="Syllables"&gt;Eight&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td data-label="Line Number"&gt;5&lt;/td&gt;
-      &lt;td /&gt;
-      &lt;td data-label="Syllables"&gt;Thirty-four&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-&lt;/table&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>A limerick<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line Number"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line"</span>&gt;</span>There was an Old Man with a beard,<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Syllables"</span>&gt;</span>Eight<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line Number"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line"</span>&gt;</span>Who said, <span class="hljs-symbol">&amp;lsquo;</span>It is just as I feared!<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Syllables"</span>&gt;</span>Eight<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line Number"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line"</span>&gt;</span>Two Owls and a Hen,<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Syllables"</span>&gt;</span>Five<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line Number"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line"</span>&gt;</span>Four Larks and a Wren,<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Syllables"</span>&gt;</span>Five<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line Number"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line"</span>&gt;</span>Have all built their nests in my beard!<span class="hljs-symbol">&amp;rsquo;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Syllables"</span>&gt;</span>Eight<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tfoot</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Line Number"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">data-label</span>=<span class="hljs-string">"Syllables"</span>&gt;</span>Thirty-four<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tfoot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>When the screen is too small (and client-side enhancements have
@@ -778,7 +776,7 @@
             to the <code>&lt;table&gt;</code> tag.</li>
           <li>When used by regular tables to respond to smaller screens, the
             headings from the <code>&lt;thead&gt;</code> are used to populate
-            each cell&rsquo;s <code>data-label</code> attribute. When using the
+            each cell’s <code>data-label</code> attribute. When using the
             card table as a component in itself and not as a responsive
             enhancement to the base table, you can skip the
             <code>&lt;thead&gt;</code> element, but you will need to add
@@ -791,9 +789,9 @@
         <div class="example">
           <dl>
             <dt>Component</dt>
-            <dd>A component is a part of a larger whole. It&rsquo;s become so
+            <dd>A component is a part of a larger whole. It’s become so
               popular precisely because it has so little to say about what kind
-              of &ldquo;part&rdquo; or &ldquo;larger whole&rdquo; that is.</dd>
+              of “part” or “larger whole” that is.</dd>
             <dt>Pattern Library</dt>
             <dd>A pattern library is a collection of components used in
               frontend development, particularly for websites, web
@@ -805,19 +803,19 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;dl&gt;
-  &lt;dt&gt;Component&lt;/dt&gt;
-  &lt;dd&gt;A component is a part of a larger whole. It&amp;rsquo;s become so
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Component<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>A component is a part of a larger whole. It<span class="hljs-symbol">&amp;rsquo;</span>s become so
   popular precisely because it has so little to say about what kind
-  of &amp;ldquo;part&amp;rdquo; or &amp;ldquo;larger whole&amp;rdquo; that is.&lt;/dd&gt;
-  &lt;dt&gt;Pattern Library&lt;/dt&gt;
-  &lt;dd&gt;A pattern library is a collection of components used in
+  of <span class="hljs-symbol">&amp;ldquo;</span>part<span class="hljs-symbol">&amp;rdquo;</span> or <span class="hljs-symbol">&amp;ldquo;</span>larger whole<span class="hljs-symbol">&amp;rdquo;</span> that is.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Pattern Library<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>A pattern library is a collection of components used in
   frontend development, particularly for websites, web
-  applications, and mobile applications.&lt;/dd&gt;
-  &lt;dt&gt;Design System&lt;/dt&gt;
-  &lt;dd&gt;A design system is a pattern library that adds design guidance
-  on when, where, how, and why to use its components.&lt;/dd&gt;
-&lt;/dl&gt;</code>
+  applications, and mobile applications.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Design System<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>A design system is a pattern library that adds design guidance
+  on when, where, how, and why to use its components.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>The classic use case for a definition list is a glossary, in
@@ -840,25 +838,25 @@
             <dt>CMYKA</dt>
             <dd>0, 0, 0, 100, 1</dd>
             <dt>HSLA</dt>
-            <dd>0&deg;, 0, 0, 1</dd>
+            <dd>0°, 0, 0, 1</dd>
             <dt>HSVA</dt>
-            <dd>0&deg;, 0, 0, 1</dd>
+            <dd>0°, 0, 0, 1</dd>
           </dl>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;dl class="vartable"&gt;
-  &lt;dt&gt;Hex&lt;/dt&gt;
-  &lt;dd&gt;#000000&lt;/dd&gt;
-  &lt;dt&gt;RGBA&lt;/dt&gt;
-  &lt;dd&gt;0, 0, 0, 1&lt;/dd&gt;
-  &lt;dt&gt;CMYKA&lt;/dt&gt;
-  &lt;dd&gt;0, 0, 0, 100, 1&lt;/dd&gt;
-  &lt;dt&gt;HSLA&lt;/dt&gt;
-  &lt;dd&gt;0&amp;deg;, 0, 0, 1&lt;/dd&gt;
-  &lt;dt&gt;HSVA&lt;/dt&gt;
-  &lt;dd&gt;0&amp;deg;, 0, 0, 1&lt;/dd&gt;
-&lt;/dl&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vartable"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Hex<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>#000000<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>RGBA<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>0, 0, 0, 1<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>CMYKA<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>0, 0, 0, 100, 1<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>HSLA<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>0<span class="hljs-symbol">&amp;deg;</span>, 0, 0, 1<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>HSVA<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>0<span class="hljs-symbol">&amp;deg;</span>, 0, 0, 1<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>The variable definition table is derived from the
@@ -887,10 +885,10 @@
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;blockquote&gt;
-  &lt;p&gt;We should work...&lt;/p&gt;
-  &lt;footer&gt;Tim Berners Lee&lt;/footer&gt;
-&lt;/blockquote&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>We should work...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>Tim Berners Lee<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>The block quote component is for quoting large sections of text
@@ -899,7 +897,7 @@
             <code>&lt;ol&gt;</code> tags.</li>
           <li>A <code>&lt;footer&gt;</code> element can be included to provide
             attribution for the quote. When used in a longer text, this may not
-            be necessary if you&rsquo;ve already provided attribution in the
+            be necessary if you’ve already provided attribution in the
             text.</li>
         </ul>
       </section>
@@ -907,16 +905,16 @@
         <h2>Pull Quote</h2>
         <div class="example">
           <aside class="pull">
-            <p>&ldquo;If we wish to get back to the business of quietly
-              improving people&rsquo;s lives, one thoughtful interaction at a
-              time, we must rid ourselves of the cult of the complex.&rdquo;</p>
+            <p>“If we wish to get back to the business of quietly
+              improving people’s lives, one thoughtful interaction at a
+              time, we must rid ourselves of the cult of the complex.”</p>
           </aside>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;aside class="pull"&gt;
-  &lt;p&gt;If we wish to get back...&lt;/p&gt;
-&lt;/aside&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pull"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If we wish to get back...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>A pull quote is a short phrase or excerpt pulled from the main
@@ -930,11 +928,11 @@
       <section id="component-img" class="component" data-component-category="Media">
         <h2>Image</h2>
         <div class="example">
-          <img src="/images/cat.jpg" alt="Kitteh" />
+          <img src="/images/cat.jpg" alt="Kitteh">
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;img src="path/to/image.jpg" alt="Alt text" /&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/image.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Alt text"</span> /&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Consider if what you want to use might be a
@@ -942,36 +940,36 @@
             unaccompanied image. While every image <em>must</em> include
             appropriate alternative text to make it accessible (see below),
             <em>most</em> images would likely benefit from a caption, which
-            the figure component provides. It&rsquo;s not <em>impossible</em>
-            for an unaccompanied image to be the right choice, but it&rsquo;s
+            the figure component provides. It’s not <em>impossible</em>
+            for an unaccompanied image to be the right choice, but it’s
             rare, so consider carefully if a figure could be a better
             choice.</li>
           <li>Images must <em><strong>always</strong></em> include appropriate
             alternative text in the <code>alt</code> attribute. This text is
             read aloud to users using screen readers, so it should give a
             useful, succinct description of the image and the purpose that it
-            plays on the page. You don&rsquo;t need to specify that it is
-            &ldquo;an image of&rdquo; or &ldquo;a photo of&rdquo;; that is
+            plays on the page. You don’t need to specify that it is
+            “an image of” or “a photo of”; that is
             understood from the context of being alternative text.</li>
-          <li>If you&rsquo;re having a difficult time coming up with
+          <li>If you’re having a difficult time coming up with
             alternative text for an image, consider the possibility that the
             image might be purely decorative. This is usually a sign that you
             should not use the image. We might need to update one or more
             components in the design system to meet an aesthetic need, but
             images in content should be used because they serve a purpose. If
-            you&rsquo;re having a hard time describing that purpose for the
-            image&rsquo;s alternative text, that can be your first sign that
-            the image doesn&rsquo;t have one.</li>
+            you’re having a hard time describing that purpose for the
+            image’s alternative text, that can be your first sign that
+            the image doesn’t have one.</li>
         </ul>
       </section>
       <section id="component-video" class="component" data-component-category="Media">
         <h2>Embedded Video</h2>
         <div class="example">
-          <iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;</code>
+          <code class="block"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"video"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV"</span> <span class="hljs-attr">allow</span>=<span class="hljs-string">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span> <span class="hljs-attr">referrerpolicy</span>=<span class="hljs-string">"strict-origin-when-cross-origin"</span> <span class="hljs-attr">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>The embed code provided by a service like <a href="https://www.youtube.com/">YouTube</a>
@@ -990,7 +988,7 @@
         <h2>Figure</h2>
         <div class="example">
           <figure>
-            <img src="/images/cat.jpg" alt="Kitteh" />
+            <img src="/images/cat.jpg" alt="Kitteh">
             <figcaption>Adorable kitteh.</figcaption>
           </figure>
           <figure>
@@ -1001,29 +999,29 @@
             <figcaption class="uncounted">Example markup for the figure component.</figcaption>
           </figure>
           <figure>
-            <iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <figcaption>&ldquo;Me at the Zoo&rdquo; was the first video uploaded to <a href="https://www.youtube.com/">YouTube</a>.</figcaption>
+            <iframe class="video" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=3FM4UUPZpghPE0HV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+            <figcaption>“Me at the Zoo” was the first video uploaded to <a href="https://www.youtube.com/">YouTube</a>.</figcaption>
           </figure>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="block">&lt;!-- Image example --&gt;
-&lt;figure&gt;
-  &lt;img src="/images/cat.jpg" alt="Kitteh" /&gt;
-  &lt;figcaption&gt;Adorable kitteh.&lt;/figcaption&gt;
-&lt;/figure&gt;
+          <code class="block"><span class="hljs-comment">&lt;!-- Image example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/images/cat.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Kitteh"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Adorable kitteh.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
 
-&lt;!-- Code snippet example --&gt;
-&lt;figure&gt;
-  &lt;code class="block"&gt;Infinite loop detected!&lt;/code&gt;
-  &lt;figcaption class="uncounted"&gt;Example markup for the figure component.&lt;/figcaption&gt;
-&lt;/figure&gt;
+<span class="hljs-comment">&lt;!-- Code snippet example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>Infinite loop detected!<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uncounted"</span>&gt;</span>Example markup for the figure component.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
 
-&lt;!-- Embedded video example --&gt;
-&lt;figure&gt;
-  &lt;iframe class="video" src="path/to/video.mpeg"&gt;&lt;/iframe&gt;
-  &lt;figcaption&gt;&amp;ldquo;Me at the Zoo&amp;rdquo; was...&lt;/figcaption&gt;
-&lt;/figure&gt;</code>
+<span class="hljs-comment">&lt;!-- Embedded video example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"video"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/video.mpeg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span><span class="hljs-symbol">&amp;ldquo;</span>Me at the Zoo<span class="hljs-symbol">&amp;rdquo;</span> was...<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></code>
         </details>
         <ul class="notes">
           <li>Most of the time, you should prefer a figure component over an
@@ -1046,5 +1044,5 @@
       </section>
     </main>
     <script src="./scripts/bundle.js"></script>
-  </body>
-</html>
+  
+</body></html>

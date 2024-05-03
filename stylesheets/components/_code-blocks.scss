@@ -1,6 +1,8 @@
+@use "../modules/mixins";
 @use "../modules/spacing";
 
 code.block {
+  @include mixins.set-style("background", "off-bg");
   display: block;
   margin: spacing.$vertical 0;
   max-height: spacing.$code-block-max-height;
