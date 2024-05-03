@@ -1,6 +1,6 @@
 @use "../modules/spacing";
 
-:not(pre) > code[class*=language-].block {
+code.block {
   display: block;
   margin: spacing.$vertical 0;
   max-height: spacing.$code-block-max-height;
